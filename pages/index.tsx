@@ -21,6 +21,17 @@ export default function Home() {
 }
 
 function Hero() {
+  const handleDownload = async () => {
+    const response = await fetch("/api/download");
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "example.pdf";
+    a.click();
+    window.URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="grid sm:grid-cols-[2fr_1fr] mt-14 gap-6 px-4 max-w-7xl mx-auto">
       <Card variant="glow" className="order-2 sm:order-1">
@@ -31,7 +42,7 @@ function Hero() {
           Engineering from Fr. Conceicao Rodrigues College of Engineering.
         </p>
         <div className="flex gap-2">
-          <button className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-accent">
+          <button onClick={handleDownload} className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-accent">
             <IconFileCv /> Resume
           </button>
           <button className="gap-1 btn btn-ghost">
