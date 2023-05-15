@@ -45,7 +45,7 @@ function Hero() {
         </p>
         <div className="flex gap-2">
           <a
-          target="blank"
+            target="blank"
             href={resume}
             className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-secondary"
           >
@@ -200,13 +200,11 @@ function Experience() {
                 {experience.start} - {experience.end}
               </p>
               <div className="justify-end card-actions">
-                <Link
-                  target="blank"
-                  className="btn btn-circle btn-primary"
-                  href={experience.letter}
-                >
-                  <IconCertificate />
-                </Link>
+                <a target="blank" href={experience.letter}>
+                  <button className="btn btn-circle btn-primary">
+                    <IconCertificate />
+                  </button>
+                </a>
                 {/* {experience.ongoing && (
                   <span className="badge badge-primary">Ongoing</span>
                 )} */}
