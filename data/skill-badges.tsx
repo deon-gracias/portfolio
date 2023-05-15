@@ -1,5 +1,5 @@
-const skill_badges = {
-  c: "https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white",
+export const skill_badges = {
+  c: "https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=black",
   cplusplus:
     "https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white",
   java: "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white",
@@ -62,4 +62,66 @@ const skill_badges = {
   git: "https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white",
 };
 
-export default skill_badges;
+export const skill_badges_mono = {
+  c: "https://img.shields.io/badge/C-fff?style=for-the-badge&logo=c&logoColor=black",
+  cplusplus:
+    "https://img.shields.io/badge/C%2B%2B-fff?style=for-the-badge&logo=c%2B%2B&logoColor=black",
+  java: "https://img.shields.io/badge/Java-fff?style=for-the-badge&logo=openjdk&logoColor=black",
+  php: "https://img.shields.io/badge/PHP-fff?style=for-the-badge&logo=php&logoColor=black",
+  python:
+    "https://img.shields.io/badge/Python-fff?style=for-the-badge&logo=python&logoColor=black",
+  html: "https://img.shields.io/badge/HTML5-fff?style=for-the-badge&logo=html5&logoColor=black",
+  css: "https://img.shields.io/badge/CSS3-fff?style=for-the-badge&logo=css3&logoColor=black",
+  javascript:
+    "https://img.shields.io/badge/JavaScript-fff?style=for-the-badge&logo=javascript&logoColor=black",
+  typescript:
+    "https://img.shields.io/badge/TypeScript-fff?style=for-the-badge&logo=typescript&logoColor=black",
+  nodejs:
+    "https://img.shields.io/badge/Node.js-fff?style=for-the-badge&logo=node.js&logoColor=black",
+  go: "https://img.shields.io/badge/Go-fff?style=for-the-badge&logo=go&logoColor=black",
+  dart: "https://img.shields.io/badge/Dart-fff?style=for-the-badge&logo=dart&logoColor=black",
+  reactjs:
+    "https://img.shields.io/badge/React.js-fff?style=for-the-badge&logo=react&logoColor=black",
+  nextjs:
+    "https://img.shields.io/badge/Next.js-fff?style=for-the-badge&logo=Next.js&logoColor=black",
+  mysql:
+    "https://img.shields.io/badge/MySQL-fff?style=for-the-badge&logo=mysql&logoColor=black",
+  postgresql:
+    "https://img.shields.io/badge/PostgreSQL-fff?style=for-the-badge&logo=postgresql&logoColor=black",
+  firebase:
+    "https://img.shields.io/badge/firebase-fff?style=for-the-badge&logo=firebase&logoColor=black",
+  mongodb:
+    "https://img.shields.io/badge/MongoDB-fff?style=for-the-badge&logo=mongodb&logoColor=black",
+  flask:
+    "https://img.shields.io/badge/Flask-fff?style=for-the-badge&logo=flask&logoColor=black",
+  flutter:
+    "https://img.shields.io/badge/Flutter-fff?style=for-the-badge&logo=flutter&logoColor=black",
+  tensorflow:
+    "https://img.shields.io/badge/TensorFlow-fff?style=for-the-badge&logo=tensorflow&logoColor=black",
+  scikitlearn:
+    "https://img.shields.io/badge/scikit-fff?style=for-the-badge&logo=scikit-learn&logoColor=black",
+  pandas:
+    "https://img.shields.io/badge/pandas-fff?style=for-the-badge&logo=pandas&logoColor=black",
+  numpy:
+    "https://img.shields.io/badge/numpy-fff?style=for-the-badge&logo=numpy&logoColor=black",
+  matplotlib:
+    "https://img.shields.io/badge/Matplotlib-fff?style=for-the-badge&logo=Matplotlib&logoColor=black",
+  powerbi:
+    "https://img.shields.io/badge/power_bi-fff?style=for-the-badge&logo=powerbi&logoColor=black",
+  django:
+    "https://img.shields.io/badge/Django-fff?style=for-the-badge&logo=django&logoColor=black",
+  figma:
+    "https://img.shields.io/badge/Figma-fff?style=for-the-badge&logo=figma&logoColor=black",
+  androidstudio:
+    "https://img.shields.io/badge/Android_Studio-fff?style=for-the-badge&logo=android-studio&logoColor=black",
+  solidity:
+    "https://img.shields.io/badge/Solidity-fff?style=for-the-badge&logo=solidity&logoColor=black",
+  ethersjs:
+    "https://img.shields.io/badge/Ethers.js-fff?style=for-the-badge&logo=Ethereum&logoColor=black",
+  linux:
+    "https://img.shields.io/badge/Linux-fff?style=for-the-badge&logo=linux&logoColor=black",
+  vim: "https://img.shields.io/badge/VIM-fff?style=for-the-badge&logo=vim&logoColor=black",
+  docker:
+    "https://img.shields.io/badge/docker-fff?style=for-the-badge&logo=docker&logoColor=black",
+  git: "https://img.shields.io/badge/git-fff?style=for-the-badge&logo=git&logoColor=black",
+};
