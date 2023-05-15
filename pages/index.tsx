@@ -28,7 +28,7 @@ function Hero() {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "example.pdf";
+    a.download = "deon_gracias_resume.pdf";
     a.click();
     window.URL.revokeObjectURL(url);
   };
