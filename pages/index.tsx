@@ -42,12 +42,15 @@ function Hero() {
           Engineering from Fr. Conceicao Rodrigues College of Engineering.
         </p>
         <div className="flex gap-2">
-          <button onClick={handleDownload} className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-accent">
+          <button
+            onClick={handleDownload}
+            className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-accent"
+          >
             <IconFileCv /> Resume
           </button>
-          <button className="gap-1 btn btn-ghost">
+          <a href="#skills" className="gap-1 btn btn-ghost">
             More <IconChevronDown size={20} />
-          </button>
+          </a>
         </div>
       </Card>
 
