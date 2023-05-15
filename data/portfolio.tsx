@@ -3,6 +3,7 @@ import {
   IconBrandLinkedin,
   IconDatabase,
   IconDeviceMobile,
+  IconMail,
   IconPackages,
   IconRobot,
   IconServer,
@@ -10,6 +11,9 @@ import {
   IconWorld,
 } from "@tabler/icons-react";
 import skill_badges from "../data/skill-badges";
+
+export const resume =
+  "https://docs.google.com/document/d/184re9dYZInpsnHHPa46KyRY59j6CfteJaUY3oU1bomQ";
 
 export const educations = [
   {
@@ -32,6 +36,11 @@ export const educations = [
 ];
 
 export const socials = [
+  {
+    name: "Email",
+    href: "mailto:deongracias1@gmail.com",
+    icon: <IconMail />,
+  },
   {
     name: "LinkedIn",
     href: "https://linkedin.com/in/deongracias",

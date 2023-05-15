@@ -8,8 +8,15 @@ import {
 } from "@tabler/icons-react";
 import DrawerLayout from "../components/DrawerLayout";
 import { twMerge } from "tailwind-merge";
-import { educations, experiences, skills, socials } from "../data/portfolio";
+import {
+  educations,
+  experiences,
+  resume,
+  skills,
+  socials,
+} from "../data/portfolio";
 import { IconWorldShare } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,17 +34,6 @@ export default function Home() {
 }
 
 function Hero() {
-  const handleDownload = async () => {
-    const response = await fetch("/api/download");
-    const blob = await response.blob();
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "deon_gracias_resume.pdf";
-    a.click();
-    window.URL.revokeObjectURL(url);
-  };
-
   return (
     <div className="grid sm:grid-cols-[2fr_1fr] mt-14 gap-6 px-4 max-w-7xl mx-auto">
       <Card variant="glow" className="order-2 sm:order-1">
@@ -48,12 +44,13 @@ function Hero() {
           Engineering from Fr. Conceicao Rodrigues College of Engineering.
         </p>
         <div className="flex gap-2">
-          <button
-            onClick={handleDownload}
+          <a
+          target="blank"
+            href={resume}
             className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-secondary"
           >
             <IconFileCv /> Resume
-          </button>
+          </a>
           <a href="#skills" className="gap-1 btn btn-ghost">
             More <IconChevronDown size={20} />
           </a>
@@ -203,13 +200,13 @@ function Experience() {
                 {experience.start} - {experience.end}
               </p>
               <div className="justify-end card-actions">
-                <a
-                target="blank"
+                <Link
+                  target="blank"
                   className="btn btn-circle btn-primary"
                   href={experience.letter}
                 >
                   <IconCertificate />
-                </a>
+                </Link>
                 {/* {experience.ongoing && (
                   <span className="badge badge-primary">Ongoing</span>
                 )} */}
