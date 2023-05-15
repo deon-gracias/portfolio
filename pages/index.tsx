@@ -6,7 +6,7 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconChevronRight,
-} from "@tabler/icons";
+} from "@tabler/icons-react";
 
 export default function Home() {
   return (

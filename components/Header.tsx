@@ -1,4 +1,4 @@
-import { IconMenu2 } from "@tabler/icons";
+import { IconMenu2 } from "@tabler/icons-react";
 
 const navList = [
   { name: "Home", href: "#home" },
