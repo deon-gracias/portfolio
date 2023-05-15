@@ -123,7 +123,7 @@ function Skills() {
             <div className="mt-5 card-actions">
               {skill.items.map((item) => (
                 <div
-                  className="overflow-hidden border rounded-full"
+                  className="overflow-hidden duration-200 border rounded-full hover:border-primary"
                   key={item.image}
                 >
                   <img
@@ -141,36 +141,6 @@ function Skills() {
   );
 }
 
-function Education() {
-  return (
-    <section id="education" className="w-full px-4 py-16 mx-auto max-w-7xl">
-      <SectionHeading className="flex justify-center" title="Education" />
-
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        {educations.map((education) => (
-          <div className="shadow-md card" key={education.name}>
-            <div className="card-body">
-              <h2 className="card-title">{education.name}</h2>
-              <p>
-                {education.degree} in {education.field} -&nbsp;
-                <b>{education.grade}</b>
-              </p>
-              <div className="card-actions">
-                <p className="text-sm">
-                  {education.start} - {education.end}
-                </p>
-                {education.pursuing && (
-                  <span className="badge badge-primary">Pursuing</span>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function Experience() {
   return (
     <section id="experience" className="w-full px-4 py-16 mx-auto max-w-7xl">
@@ -179,7 +149,7 @@ function Experience() {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {experiences.map((experience) => (
           <div
-            className="shadow-md card"
+            className="duration-200 shadow-md card hover:shadow-xl"
             key={`${experience.company}-${experience.post}`}
           >
             <div className="card-body">
@@ -207,6 +177,39 @@ function Experience() {
                 {/* {experience.ongoing && (
                   <span className="badge badge-primary">Ongoing</span>
                 )} */}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Education() {
+  return (
+    <section id="education" className="w-full px-4 py-16 mx-auto max-w-7xl">
+      <SectionHeading className="flex justify-center" title="Education" />
+
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {educations.map((education) => (
+          <div
+            className="duration-200 shadow-md card hover:shadow-xl"
+            key={education.name}
+          >
+            <div className="card-body">
+              <h2 className="card-title">{education.name}</h2>
+              <p>
+                {education.degree} in {education.field} -&nbsp;
+                <b>{education.grade}</b>
+              </p>
+              <div className="card-actions">
+                <p className="text-sm">
+                  {education.start} - {education.end}
+                </p>
+                {education.pursuing && (
+                  <span className="badge badge-primary">Pursuing</span>
+                )}
               </div>
             </div>
           </div>

@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+      serif: ["Playfair Display", ...defaultTheme.fontFamily.serif],
     },
     extend: {
       backgroundSize: {
