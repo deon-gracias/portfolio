@@ -3,7 +3,7 @@ import Header from "./Header";
 
 export default function DrawerLayout({ children }: PropsWithChildren) {
   const navItems = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "#" },
     { name: "Experience", href: "#experience" },
     { name: "Education", href: "#education" },
     { name: "Projects", href: "#projects" },
@@ -22,7 +22,9 @@ export default function DrawerLayout({ children }: PropsWithChildren) {
         <ul className="p-4 menu w-80 bg-base-100">
           {navItems.map((item) => (
             <li key={item.name}>
-              <a>{item.name}</a>
+              <a href={item.href}>
+                {item.name}
+              </a>
             </li>
           ))}
         </ul>

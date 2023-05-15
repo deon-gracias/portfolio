@@ -1,4 +1,5 @@
 import { IconMenu2 } from "@tabler/icons-react";
+import Link from "next/link";
 
 interface HeaderType {
   items: { name: string; href: string }[];
@@ -21,7 +22,9 @@ export default function Header({ items }: HeaderType) {
         <ul className="hidden flex-0 menu menu-horizontal rounded-box lg:flex">
           {items.map((item) => (
             <li key={item.name}>
-              <a>{item.name}</a>
+              <a href={item.href}>
+                {item.name}
+              </a>
             </li>
           ))}
         </ul>
