@@ -1,10 +1,15 @@
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import { PropsWithChildren } from "react";
-import { IconChevronDown, IconFileCv } from "@tabler/icons-react";
+import {
+  IconCertificate,
+  IconChevronDown,
+  IconFileCv,
+} from "@tabler/icons-react";
 import DrawerLayout from "../components/DrawerLayout";
 import { twMerge } from "tailwind-merge";
 import { educations, experiences, skills, socials } from "../data/portfolio";
+import { IconWorldShare } from "@tabler/icons-react";
 
 export default function Home() {
   return (
@@ -13,8 +18,8 @@ export default function Home() {
 
       <Hero />
       <Skills />
-      <Education />
       <Experience />
+      <Education />
 
       <Footer />
     </DrawerLayout>
@@ -183,12 +188,28 @@ function Experience() {
           >
             <div className="card-body">
               <h2 className="card-title">{experience.post}</h2>
-              <h3>{experience.company}</h3>
+              <h3 className="flex items-center gap-1">
+                {experience.company}
+                <a
+                  className="text-secondary"
+                  target="blank"
+                  href={experience.website}
+                >
+                  <IconWorldShare size={20} />
+                </a>
+              </h3>
               <h4 className="text-sm italic">{experience.type}</h4>
-              <div className="card-actions">
-                <p className="text-sm">
-                  {experience.start} - {experience.end}
-                </p>
+              <p className="text-sm">
+                {experience.start} - {experience.end}
+              </p>
+              <div className="justify-end card-actions">
+                <a
+                target="blank"
+                  className="btn btn-circle btn-primary"
+                  href={experience.letter}
+                >
+                  <IconCertificate />
+                </a>
                 {/* {experience.ongoing && (
                   <span className="badge badge-primary">Ongoing</span>
                 )} */}

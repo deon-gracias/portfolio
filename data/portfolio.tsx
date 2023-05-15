@@ -54,6 +54,9 @@ export const skills = [
       { name: "Java", image: skill_badges.java },
       { name: "JavaScript", image: skill_badges.javascript },
       { name: "TypeScript", image: skill_badges.typescript },
+      { name: "Python", image: skill_badges.python },
+      { name: "Go", image: skill_badges.go },
+      { name: "Dart", image: skill_badges.dart },
     ],
   },
   {
@@ -130,6 +133,8 @@ export const experiences = [
     type: "Internship",
     start: "December 2022",
     end: "March 2023",
+    letter:
+      "https://drive.google.com/file/d/10WHIq1OnUl244AFBnENK9wsl5oCDd9YL/view?usp=sharing",
     skills: [
       "Flutter",
       "Android",
@@ -143,11 +148,13 @@ export const experiences = [
   },
   {
     company: "Static Int. Educare",
-    website: "http://staticinteducare.in/upskilling",
+    website: "http://staticinteducare.in/upskilling.html",
     post: "Mentor",
     type: "Part Time",
     start: "July 2022",
     end: "November 2022",
+    letter:
+      "https://drive.google.com/file/d/1cBWE5BZ1Kq7XbPw9_NxefVjEgYs2BWlD/view?usp=sharing",
     skills: [
       "Mentoring",
       "Management",
@@ -159,11 +166,13 @@ export const experiences = [
   },
   {
     company: "Static Int. Educare",
-    website: "http://staticinteducare.in/upskilling",
+    website: "http://staticinteducare.in/upskilling.html",
     post: "Web Developer",
     type: "Internship",
     start: "August 2020",
     end: "July 2022",
+    letter:
+      "https://drive.google.com/file/d/1O3Pay-NU7KHbWIMjHW3bdneHvNBccIFC/view?usp=sharing",
     skills: [
       "MySQL",
       "Leadership",
@@ -177,16 +186,13 @@ export const experiences = [
   },
   {
     company: "Static Int. Educare",
-    website: "http://staticinteducare.in/upskilling",
+    website: "http://staticinteducare.in/upskilling.html",
     post: "Intern",
     type: "Internship",
     start: "June 2020",
     end: "July 2020",
-    skills: [
-      "Solidity",
-      "Flutter",
-      "Dart",
-      ""
-    ],
+    letter:
+      "https://drive.google.com/file/d/1qKj6Nts2pf0kNoup2ntkLKOxUCnYKXuW/view?usp=sharing",
+    skills: ["Solidity", "Flutter", "Dart"],
   },
 ];

@@ -1,8 +1,9 @@
 export const nav_items = [
   { name: "Home", href: "#" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
   { name: "Education", href: "#education" },
-  { name: "Projects", href: "#projects" },
 ];
 
 export const themes = [
