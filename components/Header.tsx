@@ -31,7 +31,7 @@ export default function Header({ items }: HeaderType) {
         <ChangeThemeButton />
 
         <div className="flex-none lg:hidden">
-          <label htmlFor="site-drawer" className="btn btn-square btn-ghost">
+          <label htmlFor="site-drawer" className="btn btn-square btn-primary">
             <IconMenu2 />
           </label>
         </div>
