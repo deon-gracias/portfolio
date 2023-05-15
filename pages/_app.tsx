@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           translateX: cursorXSpring,
           translateY: cursorYSpring,
         }}
-      />
+      ></motion.div>
       <Component {...pageProps} />
     </AnimatePresence>
   );

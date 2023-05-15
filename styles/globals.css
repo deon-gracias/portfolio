@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+@layer utilities {
   * {
     cursor: none;
   }
@@ -13,11 +13,18 @@
     top: 0;
     width: 32px;
     height: 32px;
-    border-radius: 16px;
+    border-radius: 50%;
     mix-blend-mode: difference;
     z-index: 999;
     pointer-events: none;
-    /* background-color: white; */
+    display: grid;
+    place-items: center;
+
     @apply bg-base-100;
+  }
+
+  .cursor-expand {
+    width: 48px;
+    height: 48px;
   }
 }
