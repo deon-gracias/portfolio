@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 import { IconChevronDown, IconFileCv } from "@tabler/icons-react";
 import DrawerLayout from "../components/DrawerLayout";
 import { twMerge } from "tailwind-merge";
-import { educations, socials } from "../data/portfolio";
+import { educations, skills, socials } from "../data/portfolio";
 
 export default function Home() {
   return (
@@ -56,18 +56,16 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
   return !variant && variant !== "blur" ? (
     <div
       className={twMerge(
-        "p-2 rounded-xl bg-gradient-to-tr from-primary to-accent",
+        "p-2 rounded-xl bg-gradient-to-tr from-primary to-accent card",
         className
       )}
     >
-      <div className="px-8 py-14 backdrop-blur-3xl bg-base-100 rounded-xl">
-        {children}
-      </div>
+      <div className="card-body bg-base-100 rounded-xl">{children}</div>
     </div>
   ) : (
     <div className={twMerge("relative", className)}>
-      <div className="absolute duration-[5s] rounded-lg opacity-75 animate-pulse -inset-1 bg-gradient-to-r from-primary to-accent blur"></div>
-      <div className="px-8 py-14 backdrop-blur-3xl bg-base-100 rounded-xl">
+      <div className="absolute duration-[5000ms] rounded-lg opacity-75 animate-pulse -inset-1 bg-gradient-to-r from-primary to-accent blur"></div>
+      <div className="h-full px-8 py-14 backdrop-blur-3xl bg-base-100 rounded-xl">
         {children}
       </div>
     </div>
@@ -89,9 +87,34 @@ function Socials() {
 }
 
 function Skills() {
-  const skills = [];
+  return (
+    <section id="skills" className="w-full px-4 pt-24 pb-16 mx-auto max-w-7xl">
+      <SectionHeading className="flex justify-center" title="Skills" />
 
-  return <></>;
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {skills.map((skill) => (
+          <Card key={skill.title}>
+            {skill.icon}
+            <h2 className="card-title">{skill.title}</h2>
+            <div className="mt-5 card-actions">
+              {skill.items.map((item) => (
+                <div
+                  className="overflow-hidden border rounded-full"
+                  key={item.image}
+                >
+                  <img
+                    className="w-full h-full"
+                    src={item.image}
+                    alt={item.name}
+                  />
+                </div>
+              ))}
+            </div>
+          </Card>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 function Education() {

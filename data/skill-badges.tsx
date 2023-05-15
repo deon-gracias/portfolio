@@ -17,7 +17,7 @@ const skill_badges = {
   go: "https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white",
   dart: "https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white",
   reactjs:
-    "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+    "https://img.shields.io/badge/React.js-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
   nextjs:
     "https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=Next.js&labelColor=000000",
   mysql:
@@ -32,6 +32,34 @@ const skill_badges = {
     "https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white",
   flutter:
     "https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white",
+  tensorflow:
+    "https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white",
+  scikitlearn:
+    "https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white",
+  pandas:
+    "https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white",
+  numpy:
+    "https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white",
+  matplotlib:
+    "https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black",
+  powerbi:
+    "https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black",
+  django:
+    "https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white",
+  figma:
+    "https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white",
+  androidstudio:
+    "https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white",
+  solidity:
+    "https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white",
+  ethersjs:
+    "https://img.shields.io/badge/Ethers.js-3C3C3D?style=for-the-badge&logo=Ethereum&logoColor=white",
+  linux:
+    "https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black",
+  vim: "https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white",
+  docker:
+    "https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white",
+  git: "https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white",
 };
 
 export default skill_badges;
