@@ -95,7 +95,11 @@ function Socials() {
     <ul className="fixed right-0 z-50 -translate-y-1/2 shadow-2xl top-1/2 menu bg-base-100 rounded-l-box">
       {socials.map((social) => (
         <li key={social.name}>
-          <a target="blank" href={social.href}>
+          <a
+            target="blank"
+            href={social.href}
+            className="hover:bg-primary hover:text-primary-content"
+          >
             {social.icon}
           </a>
         </li>
