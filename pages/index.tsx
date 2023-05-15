@@ -1,15 +1,10 @@
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import { PropsWithChildren } from "react";
-import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconChevronDown,
-} from "@tabler/icons-react";
+import { IconChevronDown, IconFileCv } from "@tabler/icons-react";
 import DrawerLayout from "../components/DrawerLayout";
 import { twMerge } from "tailwind-merge";
-import { start } from "repl";
+import { educations, socials } from "../data/portfolio";
 
 export default function Home() {
   return (
@@ -17,6 +12,7 @@ export default function Home() {
       <Socials />
 
       <Hero />
+      <Skills />
       <Education />
 
       <Footer />
@@ -36,7 +32,7 @@ function Hero() {
         </p>
         <div className="flex gap-2">
           <button className="gap-1 border-none btn btn-primary bg-gradient-to-tr from-primary to-accent">
-            Resume
+            <IconFileCv /> Resume
           </button>
           <button className="gap-1 btn btn-ghost">
             More <IconChevronDown size={20} />
@@ -79,19 +75,6 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
 }
 
 function Socials() {
-  const socials = [
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com/in/deongracias",
-      icon: <IconBrandLinkedin />,
-    },
-    {
-      name: "GitHub",
-      href: "https://github.com/deon-gracias",
-      icon: <IconBrandGithub />,
-    },
-  ];
-
   return (
     <ul className="fixed right-0 z-50 -translate-y-1/2 shadow-2xl top-1/2 menu bg-base-100 rounded-l-box">
       {socials.map((social) => (
@@ -105,27 +88,13 @@ function Socials() {
   );
 }
 
-function Education() {
-  const educations = [
-    {
-      name: "Fr. Conceicao Rodrigues College of Engineering",
-      degree: "Bachelor of Engineering",
-      field: "Computer Engineering",
-      start: "September 2021",
-      end: "May 2024",
-      pursuing: true,
-      grade: "9.2 CGPA",
-    },
-    {
-      name: "Thakur Polytechnic",
-      degree: "Diploma",
-      field: "Information Technology",
-      start: "August 2019",
-      end: "August 2021",
-      grade: "97 %",
-    },
-  ];
+function Skills() {
+  const skills = [];
 
+  return <></>;
+}
+
+function Education() {
   return (
     <section
       id="education"
