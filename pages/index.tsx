@@ -93,17 +93,15 @@ function Socials() {
   ];
 
   return (
-    <div>
-      <ul className="fixed right-0 -translate-y-1/2 shadow-2xl top-1/2 menu bg-base-100 rounded-l-box">
-        {socials.map((social) => (
-          <li key={social.name}>
-            <a target="blank" href={social.href}>
-              {social.icon}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className="fixed right-0 z-50 -translate-y-1/2 shadow-2xl top-1/2 menu bg-base-100 rounded-l-box">
+      {socials.map((social) => (
+        <li key={social.name}>
+          <a target="blank" href={social.href}>
+            {social.icon}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -129,7 +127,10 @@ function Education() {
   ];
 
   return (
-    <section className="w-full px-4 pt-24 pb-16 mx-auto max-w-7xl">
+    <section
+      id="education"
+      className="w-full px-4 pt-24 pb-16 mx-auto max-w-7xl"
+    >
       <SectionHeading className="flex justify-center" title="Education" />
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
