@@ -4,3 +4,27 @@ export const nav_items = [
   { name: "Education", href: "#education" },
   { name: "Projects", href: "#projects" },
 ];
+
+export const themes = [
+  "light",
+  "dark",
+  "emerald",
+  "corporate",
+  "synthwave",
+  "cyberpunk",
+  "garden",
+  "halloween",
+  "forest",
+  "aqua",
+  "garden",
+  "dracula",
+  "pastel",
+  "lofi",
+  "fantasy",
+  "wireframe",
+  "black",
+  "luxury",
+  "business",
+  "night",
+  "winter",
+];

@@ -44,7 +44,7 @@ function Hero() {
         <div className="flex gap-2">
           <button
             onClick={handleDownload}
-            className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-accent"
+            className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-secondary"
           >
             <IconFileCv /> Resume
           </button>
@@ -54,7 +54,7 @@ function Hero() {
         </div>
       </Card>
 
-      <div className="grid order-1 py-20 shadow-xl sm:order-2 bg-size-200 bg-gradient-to-tr animate-gradient-xy-10 from-primary to-accent rounded-xl place-items-center sm:py-0">
+      <div className="grid order-1 py-20 shadow-xl sm:order-2 bg-size-200 bg-gradient-to-tr animate-gradient-xy-10 from-primary to-secondary card-body card place-items-center sm:py-0">
         <Logo className="fill-primary-content" />
       </div>
     </div>
@@ -70,16 +70,16 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
   return variant === "border" ? (
     <div
       className={twMerge(
-        "p-2 rounded-xl bg-gradient-to-tr from-primary to-accent card",
+        "p-2 bg-gradient-to-tr from-primary to-secondary card",
         className
       )}
     >
-      <div className="card-body bg-base-100 rounded-xl">{children}</div>
+      <div className="card-body bg-base-100 card">{children}</div>
     </div>
   ) : variant === "glow" ? (
     <div className={twMerge("relative", className)}>
-      <div className="absolute duration-[5000ms] rounded-lg opacity-75 animate-pulse -inset-1 bg-gradient-to-r from-primary to-accent blur"></div>
-      <div className="h-full px-8 py-14 backdrop-blur-3xl bg-base-100 rounded-xl">
+      <div className="absolute duration-[5000ms] rounded-lg opacity-75 animate-pulse -inset-1 bg-gradient-to-r from-primary to-secondary blur"></div>
+      <div className="h-full px-8 py-14 backdrop-blur-3xl bg-base-100 card-body card">
         {children}
       </div>
     </div>
@@ -111,7 +111,7 @@ function Skills() {
 
       <div className="grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {skills.map((skill) => (
-          <Card key={skill.title} variant="border">
+          <Card key={skill.title} variant="border" className="bg-gradient-to-b">
             {skill.icon}
             <h2 className="card-title">{skill.title}</h2>
             <div className="mt-5 card-actions">
@@ -178,7 +178,7 @@ function SectionHeading({
   return (
     <h1
       className={twMerge(
-        "text-2xl mb-8 w-fit font-bold uppercase bg-gradient-to-r from-primary to-accent bg-[length:100%_9px] bg-no-repeat bg-bottom",
+        "text-2xl mb-8 w-fit font-bold uppercase bg-gradient-to-r from-primary to-secondary bg-[length:100%_9px] bg-no-repeat bg-bottom",
         className
       )}
     >
