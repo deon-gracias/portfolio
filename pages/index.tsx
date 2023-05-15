@@ -16,7 +16,6 @@ import {
   socials,
 } from "../data/portfolio";
 import { IconWorldShare } from "@tabler/icons-react";
-import Link from "next/link";
 
 export default function Home() {
   return (
