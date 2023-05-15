@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 import { IconChevronDown, IconFileCv } from "@tabler/icons-react";
 import DrawerLayout from "../components/DrawerLayout";
 import { twMerge } from "tailwind-merge";
-import { educations, skills, socials } from "../data/portfolio";
+import { educations, experiences, skills, socials } from "../data/portfolio";
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
       <Hero />
       <Skills />
       <Education />
+      <Experience />
 
       <Footer />
     </DrawerLayout>
@@ -141,10 +142,7 @@ function Skills() {
 
 function Education() {
   return (
-    <section
-      id="education"
-      className="w-full px-4 pt-24 pb-16 mx-auto max-w-7xl"
-    >
+    <section id="education" className="w-full px-4 py-16 mx-auto max-w-7xl">
       <SectionHeading className="flex justify-center" title="Education" />
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -163,6 +161,37 @@ function Education() {
                 {education.pursuing && (
                   <span className="badge badge-primary">Pursuing</span>
                 )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Experience() {
+  return (
+    <section id="experience" className="w-full px-4 py-16 mx-auto max-w-7xl">
+      <SectionHeading className="flex justify-center" title="experience" />
+
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {experiences.map((experience) => (
+          <div
+            className="shadow-md card"
+            key={`${experience.company}-${experience.post}`}
+          >
+            <div className="card-body">
+              <h2 className="card-title">{experience.post}</h2>
+              <h3>{experience.company}</h3>
+              <h4 className="text-sm italic">{experience.type}</h4>
+              <div className="card-actions">
+                <p className="text-sm">
+                  {experience.start} - {experience.end}
+                </p>
+                {/* {experience.ongoing && (
+                  <span className="badge badge-primary">Ongoing</span>
+                )} */}
               </div>
             </div>
           </div>

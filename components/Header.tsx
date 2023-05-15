@@ -12,7 +12,10 @@ export default function Header({ items }: HeaderType) {
     <div className="sticky top-0 z-50 flex justify-center px-2 py-5 duration-100 bg-opacity-90 backdrop-blur-3xl navbar">
       <div className="w-full mx-auto max-w-7xl">
         <div className="flex flex-1">
-          <a className="text-xl normal-case border-none btn bg-gradient-to-tr from-primary to-secondary text-primary-content">
+          <a
+            href="#"
+            className="text-xl normal-case border-none btn bg-gradient-to-tr from-primary to-secondary text-primary-content"
+          >
             Deon Gracias
           </a>
         </div>
@@ -25,13 +28,13 @@ export default function Header({ items }: HeaderType) {
           ))}
         </ul>
 
+        <ChangeThemeButton />
+
         <div className="flex-none lg:hidden">
           <label htmlFor="site-drawer" className="btn btn-square btn-ghost">
             <IconMenu2 />
           </label>
         </div>
-
-        <ChangeThemeButton />
       </div>
     </div>
   );

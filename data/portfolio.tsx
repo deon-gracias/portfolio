@@ -121,3 +121,72 @@ export const skills = [
     ],
   },
 ];
+
+export const experiences = [
+  {
+    company: "Skinzy Software Solutions",
+    website: "https://skinzy.in/",
+    post: "Mobile Developer",
+    type: "Internship",
+    start: "December 2022",
+    end: "March 2023",
+    skills: [
+      "Flutter",
+      "Android",
+      "iOS",
+      "Firebase",
+      "REST APIs",
+      "UI/UX",
+      "Python",
+      "Django",
+    ],
+  },
+  {
+    company: "Static Int. Educare",
+    website: "http://staticinteducare.in/upskilling",
+    post: "Mentor",
+    type: "Part Time",
+    start: "July 2022",
+    end: "November 2022",
+    skills: [
+      "Mentoring",
+      "Management",
+      "Python",
+      "Communication",
+      "Flutter",
+      "Public Speaking",
+    ],
+  },
+  {
+    company: "Static Int. Educare",
+    website: "http://staticinteducare.in/upskilling",
+    post: "Web Developer",
+    type: "Internship",
+    start: "August 2020",
+    end: "July 2022",
+    skills: [
+      "MySQL",
+      "Leadership",
+      "Management",
+      "Web Development",
+      "JavaScript",
+      "React.js",
+      "Git",
+      "PHP",
+    ],
+  },
+  {
+    company: "Static Int. Educare",
+    website: "http://staticinteducare.in/upskilling",
+    post: "Intern",
+    type: "Internship",
+    start: "June 2020",
+    end: "July 2020",
+    skills: [
+      "Solidity",
+      "Flutter",
+      "Dart",
+      ""
+    ],
+  },
+];
