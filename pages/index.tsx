@@ -23,7 +23,7 @@ export default function Home() {
 function Hero() {
   return (
     <div className="grid sm:grid-cols-[2fr_1fr] mt-14 gap-6 px-4 max-w-7xl mx-auto">
-      <Card className="order-2 sm:order-1" variant="blur">
+      <Card variant="glow" className="order-2 sm:order-1">
         <h1 className="text-5xl font-bold">Hello I am Deon Gracias</h1>
         <p className="py-6">
           Full-Stack Web Development and App Development. Strong engineering
@@ -31,7 +31,7 @@ function Hero() {
           Engineering from Fr. Conceicao Rodrigues College of Engineering.
         </p>
         <div className="flex gap-2">
-          <button className="gap-1 border-none btn btn-primary bg-gradient-to-tr from-primary to-accent">
+          <button className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-accent">
             <IconFileCv /> Resume
           </button>
           <button className="gap-1 btn btn-ghost">
@@ -48,12 +48,12 @@ function Hero() {
 }
 
 interface CardType {
-  variant?: "blur";
+  variant?: "border" | "glow";
   className?: string;
 }
 
 function Card({ variant, className, children }: PropsWithChildren<CardType>) {
-  return !variant && variant !== "blur" ? (
+  return variant === "border" ? (
     <div
       className={twMerge(
         "p-2 rounded-xl bg-gradient-to-tr from-primary to-accent card",
@@ -62,12 +62,16 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
     >
       <div className="card-body bg-base-100 rounded-xl">{children}</div>
     </div>
-  ) : (
+  ) : variant === "glow" ? (
     <div className={twMerge("relative", className)}>
       <div className="absolute duration-[5000ms] rounded-lg opacity-75 animate-pulse -inset-1 bg-gradient-to-r from-primary to-accent blur"></div>
       <div className="h-full px-8 py-14 backdrop-blur-3xl bg-base-100 rounded-xl">
         {children}
       </div>
+    </div>
+  ) : (
+    <div className={twMerge(`card`, className)}>
+      <div className="card-body">{children}</div>
     </div>
   );
 }
@@ -91,9 +95,9 @@ function Skills() {
     <section id="skills" className="w-full px-4 pt-24 pb-16 mx-auto max-w-7xl">
       <SectionHeading className="flex justify-center" title="Skills" />
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {skills.map((skill) => (
-          <Card key={skill.title}>
+          <Card key={skill.title} variant="border">
             {skill.icon}
             <h2 className="card-title">{skill.title}</h2>
             <div className="mt-5 card-actions">
