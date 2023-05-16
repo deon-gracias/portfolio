@@ -13,7 +13,7 @@ import {
 import { skill_badges_mono } from "../data/skill-badges";
 
 export const resume =
-  "https://docs.google.com/document/d/184re9dYZInpsnHHPa46KyRY59j6CfteJaUY3oU1bomQ";
+  "https://docs.google.com/document/d/184re9dYZInpsnHHPa46KyRY59j6CfteJaUY3oU1bomQ/export?format=pdf";
 
 export const educations = [
   {
