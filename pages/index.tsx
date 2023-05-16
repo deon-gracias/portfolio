@@ -37,10 +37,11 @@ function Hero() {
     <div className="grid sm:grid-cols-[2fr_1fr] mt-14 gap-6 px-4 max-w-7xl mx-auto">
       <Card variant="glow" className="order-2 sm:order-1">
         <h1 className="text-5xl font-bold">Hello I am Deon Gracias</h1>
-        <p className="py-6">
-          Full-Stack Web Development and App Development. Strong engineering
-          professional, pursuing Bachelor of Engineering focused in Computer
-          Engineering from Fr. Conceicao Rodrigues College of Engineering.
+        <h2 className="pt-1 text-xl font-bold">Full-Stack Web and App Developer.</h2>
+        <p className="pt-3 pb-6">
+          Strong engineering professional, pursuing Bachelor of Engineering
+          focused in Computer Engineering from Fr. Conceicao Rodrigues College
+          of Engineering.
         </p>
         <div className="flex gap-2">
           <a
