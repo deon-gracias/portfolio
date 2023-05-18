@@ -9,12 +9,13 @@ interface HeaderType {
 
 export default function Header({ items }: HeaderType) {
   return (
-    <div className="sticky top-0 z-50 flex justify-center px-2 py-5 duration-100 bg-opacity-90 backdrop-blur-3xl navbar">
+    <div className="sticky top-0 z-50 flex justify-center px-4 py-5 duration-100 bg-opacity-90 backdrop-blur-3xl navbar">
       <div className="w-full mx-auto max-w-7xl">
         <div className="flex flex-1">
           <a
             href="#"
-            className="text-xl normal-case border-none btn bg-gradient-to-tr from-primary to-secondary text-primary-content"
+            // className="text-xl normal-case border-none btn bg-gradient-to-tr from-primary to-secondary text-primary-content"
+            className="text-xl normal-case border-none btn btn-primary"
           >
             Deon Gracias
           </a>
