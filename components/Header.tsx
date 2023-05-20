@@ -34,9 +34,11 @@ export default function Header({ items, className }: HeaderType) {
         <ul className="hidden flex-0 menu menu-horizontal rounded-box lg:flex">
           {items.map((item) => (
             <li key={item.name}>
-              <Link href={item.href}>
-                <span>{item.name}</span>
-              </Link>
+              <CursorObserver state="action">
+                <Link href={item.href}>
+                  <span>{item.name}</span>
+                </Link>
+              </CursorObserver>
             </li>
           ))}
         </ul>

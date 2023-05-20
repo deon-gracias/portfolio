@@ -96,6 +96,15 @@ export const skills = [
     ],
   },
   {
+    title: "Mobile Development",
+    icon: <IconDeviceMobile size={40} />,
+    items: [
+      { name: "Flutter", image: skill_badges_mono.flutter },
+      { name: "Android Studio", image: skill_badges_mono.androidstudio },
+      { name: "Firebase", image: skill_badges_mono.firebase },
+    ],
+  },
+  {
     title: "Blockchain",
     icon: <IconPackages size={40} />,
     items: [
@@ -103,15 +112,6 @@ export const skills = [
       { name: "Soldity", image: skill_badges_mono.solidity },
       { name: "Ethers.js", image: skill_badges_mono.ethersjs },
       { name: "IPFS", image: skill_badges_mono.ipfs },
-    ],
-  },
-  {
-    title: "Mobile Development",
-    icon: <IconDeviceMobile size={40} />,
-    items: [
-      { name: "Flutter", image: skill_badges_mono.flutter },
-      { name: "Android Studio", image: skill_badges_mono.androidstudio },
-      { name: "Firebase", image: skill_badges_mono.firebase },
     ],
   },
   {
