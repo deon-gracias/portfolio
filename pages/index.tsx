@@ -43,9 +43,9 @@ function Hero() {
   return (
     <div
       id="home"
-      className="grid sm:grid-cols-[2fr_1fr] mt-14 gap-6 px-4 max-w-7xl mx-auto"
+      className="grid md:grid-cols-[2fr_1fr] mt-14 gap-6 px-4 max-w-7xl mx-auto"
     >
-      <Card variant="glow" className="order-2 sm:order-1">
+      <Card variant="glow" className="order-2 md:order-1">
         <h1 className="text-5xl font-bold">Hello I am Deon Gracias</h1>
         <h2 className="pt-1 text-xl font-bold">
           Full-Stack Web and App Developer.
@@ -73,7 +73,7 @@ function Hero() {
         </div>
       </Card>
 
-      <div className="grid order-1 py-20 shadow-xl sm:order-2 bg-size-200 bg-gradient-to-tr animate-gradient-xy-10 from-primary to-secondary card-body card place-items-center sm:py-0">
+      <div className="grid order-1 py-20 shadow-xl md:order-2 bg-size-200 bg-gradient-to-tr animate-gradient-xy-10 from-primary to-secondary card-body card place-items-center md:py-0">
         <Logo className="fill-primary-content" />
       </div>
     </div>

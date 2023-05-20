@@ -64,7 +64,7 @@ function ChangeThemeButton({ className }: { className?: string }) {
     <div
       className={twMerge("dropdown dropdown-bottom dropdown-end", className)}
     >
-      <label tabIndex={0} className="m-1 btn btn-ghost">
+      <label tabIndex={0} className="m-1 btn btn-circle btn-ghost">
         <IconPalette />
       </label>
       <ul
