@@ -33,13 +33,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <AnimatePresence mode="wait" initial={false}>
-      <motion.div
+      {/* <motion.div
         className="cursor"
         style={{
           translateX: cursorXSpring,
           translateY: cursorYSpring,
         }}
-      ></motion.div>
+      ></motion.div> */}
       <Component {...pageProps} />
     </AnimatePresence>
   );

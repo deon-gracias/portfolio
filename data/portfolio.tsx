@@ -9,6 +9,7 @@ import {
   IconServer,
   IconSourceCode,
   IconWorld,
+  TablerIconsProps,
 } from "@tabler/icons-react";
 import { skill_badges_mono } from "../data/skill-badges";
 
@@ -101,6 +102,7 @@ export const skills = [
       { name: "Next.js", image: skill_badges_mono.nextjs },
       { name: "Soldity", image: skill_badges_mono.solidity },
       { name: "Ethers.js", image: skill_badges_mono.ethersjs },
+      { name: "IPFS", image: skill_badges_mono.ipfs },
     ],
   },
   {
@@ -205,3 +207,49 @@ export const experiences = [
     skills: ["Solidity", "Flutter", "Dart"],
   },
 ];
+
+interface ProjectType {
+  [key: string]: {
+    title: string;
+    description: string;
+    technologies: string[];
+    links: { name: string; href: string; icon: TablerIconsProps }[];
+  };
+}
+
+export const projects: ProjectType = {
+  "agriculture-iot": {
+    title: "Agriculture IoT",
+    description: "",
+    technologies: ["nextjs", "reactjs", "nodejs", "firebase", "flask"],
+    links: [
+      {
+        name: "Deployed Website",
+        href: "https://crop-recommendation-frontend.vercel.app/",
+        icon: <IconBrandGithub />,
+      },
+      {
+        name: "Frontend",
+        href: "https://github.com/deon-gracias/agri-iot-frontend",
+        icon: <IconBrandGithub />,
+      },
+    ],
+  },
+  "tree-transparency": {
+    title: "Tree Transparency",
+    description: "",
+    technologies: ["nextjs", "flutter", "firebase", "solidity", "ipfs"],
+    links: [
+      {
+        name: "Deployed Website",
+        href: "https://crop-recommendation-frontend.vercel.app/",
+        icon: <IconBrandGithub />,
+      },
+      {
+        name: "Frontend",
+        href: "https://github.com/deon-gracias/agri-iot-frontend",
+        icon: <IconBrandGithub />,
+      },
+    ],
+  },
+};

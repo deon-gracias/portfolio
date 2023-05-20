@@ -1,4 +1,8 @@
-export const skill_badges = {
+interface SkillBadgeType {
+  [key: string]: string;
+}
+
+export const skill_badges: SkillBadgeType = {
   c: "https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=black",
   cplusplus:
     "https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white",
@@ -60,9 +64,10 @@ export const skill_badges = {
   docker:
     "https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white",
   git: "https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white",
+  ipfs: "https://img.shields.io/badge/IPFS-65C2CB.svg?style=for-the-badge&logo=IPFS&logoColor=white"
 };
 
-export const skill_badges_mono = {
+export const skill_badges_mono: SkillBadgeType = {
   c: "https://img.shields.io/badge/C-fff?style=for-the-badge&logo=c&logoColor=black",
   cplusplus:
     "https://img.shields.io/badge/C%2B%2B-fff?style=for-the-badge&logo=c%2B%2B&logoColor=black",
@@ -124,4 +129,5 @@ export const skill_badges_mono = {
   docker:
     "https://img.shields.io/badge/docker-fff?style=for-the-badge&logo=docker&logoColor=black",
   git: "https://img.shields.io/badge/git-fff?style=for-the-badge&logo=git&logoColor=black",
+  ipfs: "https://img.shields.io/badge/IPFS-fff.svg?style=for-the-badge&logo=IPFS&logoColor=black"
 };

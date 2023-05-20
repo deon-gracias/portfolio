@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  * {
-    cursor: none;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
   }
+}
+
+@layer utilities {
+  /* * {
+    cursor: none;
+  } */
 
   .cursor {
     position: fixed;

@@ -4,18 +4,23 @@ import { PropsWithChildren } from "react";
 import {
   IconCertificate,
   IconChevronDown,
+  IconExternalLink,
   IconFileCv,
+  IconLink,
 } from "@tabler/icons-react";
 import DrawerLayout from "../components/DrawerLayout";
 import { twMerge } from "tailwind-merge";
 import {
   educations,
   experiences,
+  projects,
   resume,
   skills,
   socials,
 } from "../data/portfolio";
 import { IconWorldShare } from "@tabler/icons-react";
+import Link from "next/link";
+import { skill_badges_mono } from "../data/skill-badges";
 
 export default function Home() {
   return (
@@ -24,6 +29,7 @@ export default function Home() {
 
       <Hero />
       <Skills />
+      <Projects />
       <Experience />
       <Education />
 
@@ -37,7 +43,9 @@ function Hero() {
     <div className="grid sm:grid-cols-[2fr_1fr] mt-14 gap-6 px-4 max-w-7xl mx-auto">
       <Card variant="glow" className="order-2 sm:order-1">
         <h1 className="text-5xl font-bold">Hello I am Deon Gracias</h1>
-        <h2 className="pt-1 text-xl font-bold">Full-Stack Web and App Developer.</h2>
+        <h2 className="pt-1 text-xl font-bold">
+          Full-Stack Web and App Developer.
+        </h2>
         <p className="pt-3 pb-6">
           Strong engineering professional, pursuing Bachelor of Engineering
           focused in Computer Engineering from Fr. Conceicao Rodrigues College
@@ -116,7 +124,7 @@ function Skills() {
     <section id="skills" className="w-full px-4 pt-24 pb-16 mx-auto max-w-7xl">
       <SectionHeading className="flex justify-center" title="Skills" />
 
-      <div className="grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 grid-rows-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {skills.map((skill) => (
           <Card key={skill.title} variant="border" className="bg-gradient-to-b">
             {skill.icon}
@@ -142,6 +150,54 @@ function Skills() {
   );
 }
 
+function Projects() {
+  return (
+    <section
+      id="projects"
+      className="w-full px-4 pt-24 pb-16 mx-auto max-w-7xl scroll-p-32"
+    >
+      <SectionHeading className="flex justify-center" title="Projects" />
+
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {Object.entries(projects).map(([id, project]) => (
+          <div
+            className="duration-200 shadow-md card hover:shadow-xl"
+            key={`${project.title}`}
+          >
+            <div className="card-body">
+              <h2 className="card-title">{project.title}</h2>
+              <p>{project.description}</p>
+              <div className="flex gap-1 mb-2 flex-wrap">
+                {project.technologies.map((item) => (
+                  <div
+                    className="overflow-hidden duration-200 border rounded-full hover:border-primary"
+                    key={item}
+                  >
+                    <img
+                      className="w-full h-full"
+                      src={skill_badges_mono[item]}
+                      alt={item}
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <div className="card-actions justify-end">
+                <Link href={`/projects/${id}`}>
+                  <button className="btn btn-primary gap-2">
+                    <IconExternalLink />
+                    View
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Experience() {
   return (
     <section id="experience" className="w-full px-4 py-16 mx-auto max-w-7xl">
@@ -150,7 +206,7 @@ function Experience() {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {experiences.map((experience) => (
           <div
-            className="duration-200 shadow-md card hover:shadow-xl"
+            className="duration-200 card-compact shadow-md card hover:shadow-xl"
             key={`${experience.company}-${experience.post}`}
           >
             <div className="card-body">

@@ -51,7 +51,7 @@ module.exports = {
           "0%, 100%": {
             "background-size": "400% 400%",
             "background-position": "left center",
-            "transform": "rotate(0deg)",
+            transform: "rotate(0deg)",
           },
           "50%": {
             "background-size": "200% 200%",
@@ -61,5 +61,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("@tailwindcss/typography")],
 };

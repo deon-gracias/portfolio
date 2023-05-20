@@ -1,13 +1,17 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect, useRef } from "react";
 import Header from "./Header";
 import { nav_items } from "../data/site";
 
 export default function DrawerLayout({ children }: PropsWithChildren) {
+ 
   return (
     <div className="drawer">
       <input id="site-drawer" type="checkbox" className="drawer-toggle" />
       <div className="flex flex-col drawer-content">
-        <Header items={nav_items} />
+        <Header
+          className={``}
+          items={nav_items}
+        />
         {children}
       </div>
 

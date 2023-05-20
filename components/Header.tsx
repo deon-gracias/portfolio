@@ -1,30 +1,39 @@
 import { IconMenu2, IconPalette } from "@tabler/icons-react";
-import Logo from "./Logo";
 import { themes } from "../data/site";
 import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 interface HeaderType {
   items: { name: string; href: string }[];
+  className?: string;
 }
 
-export default function Header({ items }: HeaderType) {
+export default function Header({ items, className }: HeaderType) {
   return (
-    <div className="sticky top-0 z-50 flex justify-center px-4 py-5 duration-100 bg-opacity-90 backdrop-blur-3xl navbar">
+    <div
+      className={twMerge(
+        "sticky top-0 z-50 flex justify-center px-4 py-5 duration-100 bg-opacity-90 backdrop-blur-3xl navbar",
+        className
+      )}
+    >
       <div className="w-full mx-auto max-w-7xl">
         <div className="flex flex-1">
-          <a
-            href="#"
-            // className="text-xl normal-case border-none btn bg-gradient-to-tr from-primary to-secondary text-primary-content"
-            className="text-xl normal-case border-none btn btn-primary"
-          >
-            Deon Gracias
-          </a>
+          <Link href="/#">
+            <span
+              // className="text-xl normal-case border-none btn bg-gradient-to-tr from-primary to-secondary text-primary-content"
+              className="text-xl normal-case border-none btn btn-primary"
+            >
+              Deon Gracias
+            </span>
+          </Link>
         </div>
 
         <ul className="hidden flex-0 menu menu-horizontal rounded-box lg:flex">
           {items.map((item) => (
             <li key={item.name}>
-              <a href={item.href}>{item.name}</a>
+              <Link href={item.href}>
+                <span>{item.name}</span>
+              </Link>
             </li>
           ))}
         </ul>
@@ -44,7 +53,7 @@ export default function Header({ items }: HeaderType) {
 function ChangeThemeButton({ className }: { className?: string }) {
   return (
     <div
-      className={twMerge("dropdown dropdown-bottomm dropdown-end", className)}
+      className={twMerge("dropdown dropdown-bottom dropdown-end", className)}
     >
       <label tabIndex={0} className="m-1 btn btn-ghost">
         <IconPalette />
