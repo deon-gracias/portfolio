@@ -41,7 +41,10 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="grid sm:grid-cols-[2fr_1fr] mt-14 gap-6 px-4 max-w-7xl mx-auto">
+    <div
+      id="home"
+      className="grid sm:grid-cols-[2fr_1fr] mt-14 gap-6 px-4 max-w-7xl mx-auto"
+    >
       <Card variant="glow" className="order-2 sm:order-1">
         <h1 className="text-5xl font-bold">Hello I am Deon Gracias</h1>
         <h2 className="pt-1 text-xl font-bold">
