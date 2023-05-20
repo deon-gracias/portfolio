@@ -11,9 +11,15 @@ import {
 import { IconDownload, IconExternalLink } from "@tabler/icons-react";
 import { cursorStore } from "../store/cursor-store";
 import { twMerge } from "tailwind-merge";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { cursor } = cursorStore();
+  const { cursor, setCursor } = cursorStore();
+  const router = useRouter();
+
+  useEffect(() => {
+    setCursor(null);
+  }, [router.query]);
 
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
