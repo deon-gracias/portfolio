@@ -111,7 +111,7 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
 
 function Socials() {
   return (
-    <ul className="fixed left-0 z-50 -translate-y-1/2 shadow-2xl top-1/2 menu bg-base-100 rounded-r-box">
+    <ul className="fixed bg-base-200 border-primary left-0 z-50 -translate-y-1/2 shadow-xl top-1/2 menu rounded-r-box">
       {socials.map((social) => (
         <li
           key={social.name}
@@ -224,13 +224,15 @@ function Experience() {
               <h2 className="card-title">{experience.post}</h2>
               <h3 className="flex items-center gap-1">
                 {experience.company}
-                <a
-                  className="text-secondary"
-                  target="blank"
-                  href={experience.website}
-                >
-                  <IconWorldShare size={20} />
-                </a>
+                <CursorObserver state={"action"}>
+                  <a
+                    className="text-secondary"
+                    target="blank"
+                    href={experience.website}
+                  >
+                    <IconWorldShare size={20} />
+                  </a>
+                </CursorObserver>
               </h3>
               <h4 className="text-sm italic">{experience.type}</h4>
               <p className="text-sm">
