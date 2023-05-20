@@ -17,11 +17,13 @@ export default function DrawerLayout({ children }: PropsWithChildren) {
         <label htmlFor="site-drawer" className="drawer-overlay"></label>
         <ul className="p-4 menu w-80 bg-base-100">
           {nav_items.map((item) => (
-            <li key={item.name}>
-              <CursorObserver state={"action"}>
-                <Link href={item.href}>{item.name}</Link>
-              </CursorObserver>
-            </li>
+            <CursorObserver key={item.name} state={"action"}>
+              <li>
+                <Link legacyBehavior href={item.href}>
+                  {item.name}
+                </Link>
+              </li>
+            </CursorObserver>
           ))}
         </ul>
       </div>
