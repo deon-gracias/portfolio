@@ -132,6 +132,7 @@ export const skills = [
       { name: "MySQL", image: skill_badges_mono.mysql },
       { name: "PostgreSQL", image: skill_badges_mono.postgresql },
       { name: "Firebase", image: skill_badges_mono.firebase },
+      { name: "Pocketbase", image: skill_badges_mono.pocketbase },
     ],
   },
 ];
@@ -221,7 +222,14 @@ export const projects: ProjectType = {
   "agriculture-iot": {
     title: "Agriculture IoT",
     description: "",
-    technologies: ["nextjs", "reactjs", "nodejs", "firebase", "flask"],
+    technologies: [
+      "nextjs",
+      "reactjs",
+      "nodejs",
+      "firebase",
+      "flask",
+      "arduino",
+    ],
     links: [
       {
         name: "Deployed Website",
@@ -239,17 +247,31 @@ export const projects: ProjectType = {
     title: "Tree Transparency",
     description: "",
     technologies: ["nextjs", "flutter", "firebase", "solidity", "ipfs"],
-    links: [
-      {
-        name: "Deployed Website",
-        href: "https://crop-recommendation-frontend.vercel.app/",
-        icon: <IconBrandGithub />,
-      },
-      {
-        name: "Frontend",
-        href: "https://github.com/deon-gracias/agri-iot-frontend",
-        icon: <IconBrandGithub />,
-      },
-    ],
+    links: [],
+  },
+  // edutube: {},
+  "inventory-management": {
+    title: "College Inventory Management",
+    description: "",
+    technologies: ["nextjs", "pocketbase"],
+    links: [],
+  },
+  "ieee-conference": {
+    title: "CRCE IEEE Conference 2024",
+    description: "",
+    technologies: ["nextjs", "reactjs", "pocketbase"],
+    links: [],
+  },
+  "minmax-tic-tac-toe": {
+    title: "Alpha Beta Pruning Minmax Tic Tac Toe",
+    description: "",
+    technologies: ["nextjs", "reactjs"],
+    links: [],
+  },
+  "course-scheduling-electron": {
+    title: "Course Scheduling System",
+    description: "",
+    technologies: ["electron", "reactjs"],
+    links: [],
   },
 };

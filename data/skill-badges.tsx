@@ -64,7 +64,16 @@ export const skill_badges: SkillBadgeType = {
   docker:
     "https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white",
   git: "https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white",
-  ipfs: "https://img.shields.io/badge/IPFS-65C2CB.svg?style=for-the-badge&logo=IPFS&logoColor=white"
+  ipfs: "https://img.shields.io/badge/IPFS-65C2CB.svg?style=for-the-badge&logo=IPFS&logoColor=white",
+  trpc: "https://img.shields.io/badge/tRPC-2596BE.svg?style=for-the-badge&logo=tRPC&logoColor=white",
+  prisma:
+    "https://img.shields.io/badge/Prisma-2D3748.svg?style=for-the-badge&logo=Prisma&logoColor=white",
+  pocketbase:
+    "https://img.shields.io/badge/PocketBase-B8DBE4.svg?style=for-the-badge&logo=PocketBase&logoColor=black",
+  arduino:
+    "https://img.shields.io/badge/Arduino-00979D.svg?style=for-the-badge&logo=Arduino&logoColor=white",
+  electron:
+    "https://img.shields.io/badge/Electron-47848F.svg?style=for-the-badge&logo=Electron&logoColor=white",
 };
 
 export const skill_badges_mono: SkillBadgeType = {
@@ -129,5 +138,14 @@ export const skill_badges_mono: SkillBadgeType = {
   docker:
     "https://img.shields.io/badge/docker-fff?style=for-the-badge&logo=docker&logoColor=black",
   git: "https://img.shields.io/badge/git-fff?style=for-the-badge&logo=git&logoColor=black",
-  ipfs: "https://img.shields.io/badge/IPFS-fff.svg?style=for-the-badge&logo=IPFS&logoColor=black"
+  ipfs: "https://img.shields.io/badge/IPFS-fff.svg?style=for-the-badge&logo=IPFS&logoColor=black",
+  trpc: "https://img.shields.io/badge/tRPC-fff.svg?style=for-the-badge&logo=tRPC&logoColor=black",
+  prisma:
+    "https://img.shields.io/badge/Prisma-fff.svg?style=for-the-badge&logo=Prisma&logoColor=black",
+  pocketbase:
+    "https://img.shields.io/badge/PocketBase-fff.svg?style=for-the-badge&logo=PocketBase&logoColor=black",
+  arduino:
+    "https://img.shields.io/badge/Arduino-fff.svg?style=for-the-badge&logo=Arduino&logoColor=black",
+  electron:
+    "https://img.shields.io/badge/Electron-fff.svg?style=for-the-badge&logo=Electron&logoColor=black",
 };
