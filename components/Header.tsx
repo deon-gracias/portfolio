@@ -1,5 +1,5 @@
 import { IconMenu2, IconPalette } from "@tabler/icons-react";
-import { themes } from "../data/site";
+import { nav_items, themes } from "../data/site";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 import CursorObserver from "./CursorObserver";
@@ -20,7 +20,7 @@ export default function Header({ items, className }: HeaderType) {
       <div className="w-full mx-auto max-w-7xl">
         <div className="flex flex-1">
           <CursorObserver state={"action"}>
-            <Link href="/#">
+            <Link href={nav_items[0].href}>
               <span
                 // className="text-xl normal-case border-none btn bg-gradient-to-tr from-primary to-secondary text-primary-content"
                 className="text-xl normal-case border-none btn btn-primary"
