@@ -10,9 +10,9 @@
 }
 
 @layer utilities {
-  /* * {
+  * {
     cursor: none;
-  } */
+  }
 
   .cursor {
     position: fixed;
@@ -21,16 +21,15 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    mix-blend-mode: difference;
     z-index: 999;
     pointer-events: none;
     display: grid;
     place-items: center;
-    background-color: white;
   }
 
-  .cursor-expand {
-    width: 48px;
-    height: 48px;
+  @media (pointer: none), (pointer: coarse) {
+    .cursor {
+      visibility: hidden;
+    }
   }
 }

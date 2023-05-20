@@ -8,8 +8,13 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import { IconDownload, IconExternalLink } from "@tabler/icons-react";
+import { cursorStore } from "../store/cursor-store";
+import { twMerge } from "tailwind-merge";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { cursor } = cursorStore();
+
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
@@ -21,8 +26,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     themeChange(false);
 
     const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX - 16);
-      cursorY.set(e.clientY - 16);
+      cursorX.set(e.clientX - 15);
+      cursorY.set(e.clientY - 15);
     };
 
     window.addEventListener("mousemove", moveCursor);
@@ -32,14 +37,28 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      {/* <motion.div
-        className="cursor"
+    <AnimatePresence initial={false}>
+      <motion.div
+        key="cursor"
+        className={twMerge(
+          "cursor bg-primary",
+          !cursor ? "" : "bg-accent text-accent-content"
+        )}
         style={{
           translateX: cursorXSpring,
           translateY: cursorYSpring,
         }}
-      ></motion.div> */}
+        initial={{
+          width: 30,
+          height: 30,
+        }}
+        animate={
+          cursor ? (cursor !== "action" ? { scale: 2 } : { scale: 0.5 }) : {}
+        }
+      >
+        {cursor === "download" && <IconDownload size={15} />}
+        {cursor === "link" && <IconExternalLink size={15} />}
+      </motion.div>
       <Component {...pageProps} />
     </AnimatePresence>
   );

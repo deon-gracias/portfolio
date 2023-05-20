@@ -2,6 +2,7 @@ import { IconMenu2, IconPalette } from "@tabler/icons-react";
 import { themes } from "../data/site";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
+import CursorObserver from "./CursorObserver";
 
 interface HeaderType {
   items: { name: string; href: string }[];
@@ -18,14 +19,16 @@ export default function Header({ items, className }: HeaderType) {
     >
       <div className="w-full mx-auto max-w-7xl">
         <div className="flex flex-1">
-          <Link href="/#">
-            <span
-              // className="text-xl normal-case border-none btn bg-gradient-to-tr from-primary to-secondary text-primary-content"
-              className="text-xl normal-case border-none btn btn-primary"
-            >
-              Deon Gracias
-            </span>
-          </Link>
+          <CursorObserver state={"action"}>
+            <Link href="/#">
+              <span
+                // className="text-xl normal-case border-none btn bg-gradient-to-tr from-primary to-secondary text-primary-content"
+                className="text-xl normal-case border-none btn btn-primary"
+              >
+                Deon Gracias
+              </span>
+            </Link>
+          </CursorObserver>
         </div>
 
         <ul className="hidden flex-0 menu menu-horizontal rounded-box lg:flex">
@@ -38,12 +41,16 @@ export default function Header({ items, className }: HeaderType) {
           ))}
         </ul>
 
-        <ChangeThemeButton />
+        <CursorObserver state={"action"}>
+          <ChangeThemeButton />
+        </CursorObserver>
 
         <div className="flex-none lg:hidden">
-          <label htmlFor="site-drawer" className="btn btn-square btn-primary">
-            <IconMenu2 />
-          </label>
+          <CursorObserver state={"action"}>
+            <label htmlFor="site-drawer" className="btn btn-square btn-primary">
+              <IconMenu2 />
+            </label>
+          </CursorObserver>
         </div>
       </div>
     </div>

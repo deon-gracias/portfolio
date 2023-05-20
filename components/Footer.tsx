@@ -1,4 +1,5 @@
 import { socials } from "../data/portfolio";
+import CursorObserver from "./CursorObserver";
 
 export default function Footer() {
   return (
@@ -6,13 +7,15 @@ export default function Footer() {
       <div className="flex flex-col items-center w-full">
         <div className="flex">
           {socials.map((social) => (
-            <a
-              className="flex items-center gap-1 px-3"
-              href={social.href}
-              key={social.href}
-            >
-              {social.icon}
-            </a>
+            <CursorObserver key={social.href} state={"action"}>
+              <a
+                className="flex items-center gap-1 px-3 hover:text-primary"
+                href={social.href}
+                key={social.href}
+              >
+                {social.icon}
+              </a>
+            </CursorObserver>
           ))}
         </div>
 

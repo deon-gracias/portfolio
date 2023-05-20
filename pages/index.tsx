@@ -21,6 +21,7 @@ import {
 import { IconWorldShare } from "@tabler/icons-react";
 import Link from "next/link";
 import { skill_badges_mono } from "../data/skill-badges";
+import CursorObserver from "../components/CursorObserver";
 
 export default function Home() {
   return (
@@ -52,16 +53,20 @@ function Hero() {
           of Engineering.
         </p>
         <div className="flex gap-2">
-          <a
-            target="blank"
-            href={resume}
-            className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-secondary"
-          >
-            <IconFileCv /> Resume
-          </a>
-          <a href="#skills" className="gap-1 btn btn-ghost">
-            More <IconChevronDown size={20} />
-          </a>
+          <CursorObserver state="download">
+            <a
+              target="blank"
+              href={resume}
+              className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-secondary"
+            >
+              <IconFileCv /> Resume
+            </a>
+          </CursorObserver>
+          <CursorObserver state="action">
+            <a href="#skills" className="gap-1 btn btn-ghost">
+              More <IconChevronDown size={20} />
+            </a>
+          </CursorObserver>
         </div>
       </Card>
 
@@ -95,7 +100,7 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
       </div>
     </div>
   ) : (
-    <div className={twMerge(`card`, className)}>
+    <div className={twMerge("card", className)}>
       <div className="card-body">{children}</div>
     </div>
   );
@@ -103,16 +108,17 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
 
 function Socials() {
   return (
-    <ul className="fixed right-0 z-50 -translate-y-1/2 shadow-2xl top-1/2 menu bg-base-100 rounded-l-box">
+    <ul className="fixed left-0 z-50 -translate-y-1/2 shadow-2xl top-1/2 menu bg-base-100 rounded-r-box">
       {socials.map((social) => (
-        <li key={social.name}>
-          <a
-            target="blank"
-            href={social.href}
-            className="hover:bg-primary hover:text-primary-content"
-          >
-            {social.icon}
-          </a>
+        <li
+          key={social.name}
+          className="hover:bg-primary hover:text-primary-content"
+        >
+          <CursorObserver state="link">
+            <a target="blank" href={social.href}>
+              {social.icon}
+            </a>
+          </CursorObserver>
         </li>
       ))}
     </ul>
@@ -183,12 +189,14 @@ function Projects() {
               </div>
 
               <div className="card-actions justify-end">
-                <Link href={`/projects/${id}`}>
-                  <button className="btn btn-primary gap-2">
-                    <IconExternalLink />
-                    View
-                  </button>
-                </Link>
+                <CursorObserver state={"link"}>
+                  <Link href={`/projects/${id}`}>
+                    <button className="btn btn-primary gap-2">
+                      <IconExternalLink />
+                      View
+                    </button>
+                  </Link>
+                </CursorObserver>
               </div>
             </div>
           </div>
@@ -226,11 +234,13 @@ function Experience() {
                 {experience.start} - {experience.end}
               </p>
               <div className="justify-end card-actions">
-                <a target="blank" href={experience.letter}>
-                  <button className="btn btn-circle btn-primary">
-                    <IconCertificate />
-                  </button>
-                </a>
+                <CursorObserver state={"link"}>
+                  <a target="blank" href={experience.letter}>
+                    <button className="btn btn-circle btn-primary">
+                      <IconCertificate />
+                    </button>
+                  </a>
+                </CursorObserver>
                 {/* {experience.ongoing && (
                   <span className="badge badge-primary">Ongoing</span>
                 )} */}
