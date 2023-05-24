@@ -1,12 +1,14 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
+import { useRouter } from "next/router";
 import { remark } from "remark";
 import html from "remark-html";
 import { InferGetStaticPropsType } from "next";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Footer from "../../components/Footer";
 import DrawerLayout from "../../components/DrawerLayout";
+import { IconArrowBackUp } from "@tabler/icons-react";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -24,17 +26,26 @@ const projectDataDir = "data/projects";
 export default function Project({
   project,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const router = useRouter();
   return (
     <DrawerLayout>
+      <button
+        onClick={() => router.back()}
+        className="mx-4 btn w-fit gap-2 fixed bottom-3 right-3"
+      >
+        <IconArrowBackUp /> Back
+      </button>
+
       <div className="px-4 py-12 mx-auto grow max-w-7xl">
         <h1 className="mb-10 text-5xl font-bold">{project.metadata.title}</h1>
 
         <div className="mb-4 space-x-2">
-          {project.metadata.tags.map((tag: string) => (
-            <div className="badge badge-secondary" key={tag}>
-              {tag}
-            </div>
-          ))}
+          {project.metadata.tags &&
+            project.metadata.tags.map((tag: string) => (
+              <div className="badge badge-secondary" key={tag}>
+                {tag}
+              </div>
+            ))}
         </div>
         <div
           className="prose"
