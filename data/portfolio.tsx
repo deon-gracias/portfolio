@@ -212,7 +212,7 @@ export const experiences = [
 interface ProjectType {
   [key: string]: {
     title: string;
-    description: string;
+    description: JSX.Element;
     technologies: string[];
     links: { name: string; href: string; icon: TablerIconsProps }[];
   };
@@ -221,7 +221,7 @@ interface ProjectType {
 export const projects: ProjectType = {
   "agriculture-iot": {
     title: "Agriculture IoT",
-    description: "",
+    description: <></>,
     technologies: [
       "nextjs",
       "reactjs",
@@ -245,32 +245,44 @@ export const projects: ProjectType = {
   },
   "tree-transparency": {
     title: "Tree Transparency",
-    description: "",
+    description: <></>,
     technologies: ["nextjs", "flutter", "firebase", "solidity", "ipfs"],
     links: [],
   },
   // edutube: {},
+  "hotel-bookings-analysis": {
+    title: "Hotel Bookings Analysis",
+    description: <></>,
+    technologies: ["powerbi", "sqlserver"],
+    links: [
+      {
+        name: "Github",
+        href: "https://github.com/deon-gracias/hotel-bookings-power-bi",
+        icon: <IconBrandGithub />,
+      },
+    ],
+  },
   "inventory-management": {
     title: "College Inventory Management",
-    description: "",
+    description: <></>,
     technologies: ["nextjs", "pocketbase"],
     links: [],
   },
   "ieee-conference": {
     title: "CRCE IEEE Conference 2024",
-    description: "",
+    description: <></>,
     technologies: ["nextjs", "reactjs", "pocketbase"],
     links: [],
   },
   "minmax-tic-tac-toe": {
     title: "Alpha Beta Pruning Minmax Tic Tac Toe",
-    description: "",
+    description: <></>,
     technologies: ["nextjs", "reactjs"],
     links: [],
   },
   "course-scheduling-electron": {
     title: "Course Scheduling System",
-    description: "",
+    description: <></>,
     technologies: ["electron", "reactjs"],
     links: [],
   },
