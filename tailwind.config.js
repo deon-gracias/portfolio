@@ -24,6 +24,7 @@ module.exports = {
         "gradient-x-10": "gradient-x 10000ms ease infinite",
         "gradient-y-10": "gradient-y 1000ms ease infinite",
         "gradient-xy-5": "gradient-xy 5000ms ease infinite",
+        "gradient-xy-8": "gradient-xy 8000ms ease infinite",
         "gradient-xy-10": "gradient-xy 10000ms ease infinite",
       },
       keyframes: {

@@ -73,7 +73,7 @@ function Hero() {
         </div>
       </Card>
 
-      <div className="grid order-1 py-20 shadow-xl md:order-2 bg-size-200 bg-gradient-to-tr animate-gradient-xy-10 from-primary to-secondary card-body card place-items-center md:py-0">
+      <div className="grid order-1 py-20 shadow-xl md:order-2 bg-size-200 bg-gradient-to-tr animate-gradient-xy-8 from-primary to-secondary card-body card place-items-center md:py-0">
         <Logo className="fill-primary-content" />
       </div>
     </div>
