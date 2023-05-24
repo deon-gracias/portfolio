@@ -89,7 +89,7 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
   return variant === "border" ? (
     <div
       className={twMerge(
-        "p-2 bg-gradient-to-tr from-primary to-secondary card",
+        "p-1 bg-gradient-to-tr from-primary to-secondary card",
         className
       )}
     >
@@ -207,6 +207,12 @@ function Projects() {
             </div>
           ))}
       </div>
+
+      <CursorObserver state={"action"}>
+        <Link href="/projects">
+          <button className="btn btn-primary mt-4 w-full">View More</button>
+        </Link>
+      </CursorObserver>
     </section>
   );
 }
