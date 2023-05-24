@@ -224,7 +224,7 @@ export const projects: ProjectType = {
     description: <></>,
     technologies: [
       "nextjs",
-      "reactjs",
+      "flutter",
       "nodejs",
       "firebase",
       "flask",
@@ -246,7 +246,7 @@ export const projects: ProjectType = {
   "tree-transparency": {
     title: "Tree Transparency",
     description: <></>,
-    technologies: ["nextjs", "flutter", "firebase", "solidity", "ipfs"],
+    technologies: ["nextjs", "firebase", "solidity", "ipfs"],
     links: [],
   },
   // edutube: {},
