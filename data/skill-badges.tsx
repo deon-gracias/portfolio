@@ -74,6 +74,8 @@ export const skill_badges: SkillBadgeType = {
     "https://img.shields.io/badge/Arduino-00979D.svg?style=for-the-badge&logo=Arduino&logoColor=white",
   electron:
     "https://img.shields.io/badge/Electron-47848F.svg?style=for-the-badge&logo=Electron&logoColor=white",
+  sqlserver:
+    "https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white",
 };
 
 export const skill_badges_mono: SkillBadgeType = {
@@ -148,4 +150,6 @@ export const skill_badges_mono: SkillBadgeType = {
     "https://img.shields.io/badge/Arduino-fff.svg?style=for-the-badge&logo=Arduino&logoColor=black",
   electron:
     "https://img.shields.io/badge/Electron-fff.svg?style=for-the-badge&logo=Electron&logoColor=black",
+  sqlserver:
+    "https://img.shields.io/badge/Microsoft%20SQL%20Server-fff?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=black",
 };
