@@ -60,7 +60,7 @@ function Hero() {
             <a
               target="blank"
               href={resume}
-              className="gap-1 border-none btn btn-primary bg-gradient-to-tr animate-gradient-xy-10 from-primary to-secondary"
+              className="gap-1 border-none btn btn-primary"
             >
               <IconFileCv /> Resume
             </a>
