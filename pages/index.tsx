@@ -133,18 +133,21 @@ function Skills() {
   const scrollContainer = useScrollContainer();
 
   return (
-    <section id="skills" className="w-full px-4 pt-24 pb-16 mx-auto max-w-7xl">
-      <SectionHeading className="flex justify-center" title="Skills" />
+    <section id="skills" className="w-full pt-24 pb-16 mx-auto max-w-7xl">
+      <SectionHeading className="ml-4 flex justify-center" title="Skills" />
 
       <div
         ref={scrollContainer.ref}
         className="flex pb-4 overflow-x-auto overflow-y-visible"
       >
-        {skills.map((skill) => (
+        {skills.map((skill, index) => (
           <Card
             key={skill.title}
             variant="border"
-            className="mr-6 w-72 h-96 flex-grow-0 flex-shrink-0"
+            className={twMerge(
+              "mr-6 w-72 h-96 flex-grow-0 flex-shrink-0",
+              index === 0 ? "ml-4" : index === skills.length - 1 && "mr-4"
+            )}
           >
             {skill.icon}
             <h2 className="card-title">{skill.title}</h2>
