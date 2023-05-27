@@ -112,7 +112,7 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
 
 function Socials() {
   return (
-    <ul className="fixed bg-base-200 border-primary left-0 z-50 -translate-y-1/2 shadow-xl top-1/2 menu rounded-r-box">
+    <ul className="fixed bg-base-200/50 border-primary right-0 z-50 -translate-y-1/2 shadow-xl top-1/2 menu rounded-l-box">
       {socials.map((social) => (
         <li
           key={social.name}
