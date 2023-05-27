@@ -22,6 +22,7 @@ import { IconWorldShare } from "@tabler/icons-react";
 import Link from "next/link";
 import { skill_badges_mono } from "../data/skill-badges";
 import CursorObserver from "../components/CursorObserver";
+import { useScrollContainer } from "react-indiana-drag-scroll";
 
 export default function Home() {
   return (
@@ -129,13 +130,22 @@ function Socials() {
 }
 
 function Skills() {
+  const scrollContainer = useScrollContainer();
+
   return (
     <section id="skills" className="w-full px-4 pt-24 pb-16 mx-auto max-w-7xl">
       <SectionHeading className="flex justify-center" title="Skills" />
 
-      <div className="grid grid-cols-1 grid-rows-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        ref={scrollContainer.ref}
+        className="flex mt-24 mb-24 pb-4 overflow-x-auto overflow-y-visible"
+      >
         {skills.map((skill) => (
-          <Card key={skill.title} variant="border" className="bg-">
+          <Card
+            key={skill.title}
+            variant="border"
+            className="mr-6 w-72 h-96 flex-grow-0 flex-shrink-0"
+          >
             {skill.icon}
             <h2 className="card-title">{skill.title}</h2>
             <div className="mt-5 card-actions">
