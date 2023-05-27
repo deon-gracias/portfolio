@@ -180,7 +180,7 @@ function Projects() {
     >
       <SectionHeading className="flex justify-center" title="Projects" />
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-rows-2 md:grid-cols-2">
         {Object.entries(projects)
           .slice(0, 4)
           .map(([id, project]) => (
@@ -191,10 +191,10 @@ function Projects() {
               <div className="card-body">
                 <h2 className="card-title">{project.title}</h2>
                 <p>{project.description}</p>
-                <div className="flex gap-1 mb-2 flex-wrap">
+                <div className="flex gap-1 my-2 flex-wrap">
                   {project.technologies.map((item) => (
                     <div
-                      className="items-stretch overflow-hidden duration-200 border rounded-full hover:border-primary"
+                      className="overflow-hidden duration-200 border rounded-full hover:border-primary"
                       key={item}
                     >
                       <img
