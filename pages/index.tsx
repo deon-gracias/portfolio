@@ -30,9 +30,9 @@ export default function Home() {
       <Socials />
 
       <Hero />
+      <Skills />
       <Projects />
       <Experience />
-      <Skills />
       <Education />
 
       <Footer />
@@ -138,7 +138,7 @@ function Skills() {
 
       <div
         ref={scrollContainer.ref}
-        className="flex mt-24 mb-24 pb-4 overflow-x-auto overflow-y-visible"
+        className="flex pb-4 overflow-x-auto overflow-y-visible"
       >
         {skills.map((skill) => (
           <Card
