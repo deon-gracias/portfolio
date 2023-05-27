@@ -221,7 +221,7 @@ interface ProjectType {
 export const projects: ProjectType = {
   "agriculture-iot": {
     title: "Agriculture IoT",
-    description: <></>,
+    description: <>Web, Mobile & Machine Learning</>,
     technologies: [
       "nextjs",
       "flutter",
@@ -245,14 +245,14 @@ export const projects: ProjectType = {
   },
   "tree-transparency": {
     title: "Tree Transparency",
-    description: <></>,
+    description: <>Web & Blockchain</>,
     technologies: ["nextjs", "firebase", "solidity", "ipfs"],
     links: [],
   },
   // edutube: {},
   "hotel-bookings-analysis": {
     title: "Hotel Bookings Analysis",
-    description: <></>,
+    description: <>Data Analysia & Visualization</>,
     technologies: ["powerbi", "sqlserver"],
     links: [
       {
