@@ -194,7 +194,7 @@ function Projects() {
                 <div className="flex gap-1 mb-2 flex-wrap">
                   {project.technologies.map((item) => (
                     <div
-                      className="overflow-hidden duration-200 border rounded-full hover:border-primary"
+                      className="items-stretch overflow-hidden duration-200 border rounded-full hover:border-primary"
                       key={item}
                     >
                       <img
@@ -206,7 +206,7 @@ function Projects() {
                   ))}
                 </div>
 
-                {/* <div className="card-actions justify-end">
+                <div className="card-actions justify-end">
                   <CursorObserver state={"link"}>
                     <Link href={`/projects/${id}`}>
                       <button className="btn btn-primary gap-2">
@@ -215,17 +215,17 @@ function Projects() {
                       </button>
                     </Link>
                   </CursorObserver>
-                </div> */}
+                </div>
               </div>
             </div>
           ))}
       </div>
 
-      <CursorObserver state={"action"}>
+      {/* <CursorObserver state={"action"}>
         <Link href="/projects">
           <button className="btn btn-primary mt-4 w-full">View More</button>
         </Link>
-      </CursorObserver>
+      </CursorObserver> */}
     </section>
   );
 }
