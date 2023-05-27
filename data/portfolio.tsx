@@ -262,28 +262,40 @@ export const projects: ProjectType = {
       },
     ],
   },
-  "inventory-management": {
-    title: "College Inventory Management",
-    description: <></>,
-    technologies: ["nextjs", "pocketbase"],
-    links: [],
-  },
-  "ieee-conference": {
-    title: "CRCE IEEE Conference 2024",
-    description: <></>,
-    technologies: ["nextjs", "reactjs", "pocketbase"],
-    links: [],
-  },
-  "minmax-tic-tac-toe": {
-    title: "Alpha Beta Pruning Minmax Tic Tac Toe",
-    description: <></>,
-    technologies: ["nextjs", "reactjs"],
-    links: [],
-  },
-  "course-scheduling-electron": {
-    title: "Course Scheduling System",
-    description: <></>,
-    technologies: ["electron", "reactjs"],
-    links: [],
-  },
+  // "inventory-management": {
+  //   title: "College Inventory Management",
+  //   description: <></>,
+  //   technologies: ["nextjs", "pocketbase"],
+  //   links: [],
+  // },
+  // "ieee-conference": {
+  //   title: "CRCE IEEE Conference 2024",
+  //   description: <></>,
+  //   technologies: ["nextjs", "reactjs", "pocketbase"],
+  //   links: [],
+  // },
+  // "minmax-tic-tac-toe": {
+  //   title: "Alpha Beta Pruning Minmax Tic Tac Toe",
+  //   description: <></>,
+  //   technologies: ["nextjs", "reactjs"],
+  //   links: [
+  //     {
+  //       name: "Github",
+  //       href: "",
+  //       icon: <IconBrandGithub />,
+  //     },
+  //   ],
+  // },
+  // "course-scheduling-electron": {
+  //   title: "Course Scheduling System",
+  //   description: <></>,
+  //   technologies: ["electron", "reactjs"],
+  //   links: [
+  //     {
+  //       name: "Github",
+  //       href: "",
+  //       icon: <IconBrandGithub />,
+  //     },
+  //   ],
+  // },
 };

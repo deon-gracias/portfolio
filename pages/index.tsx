@@ -29,9 +29,9 @@ export default function Home() {
       <Socials />
 
       <Hero />
-      <Skills />
       <Projects />
       <Experience />
+      <Skills />
       <Education />
 
       <Footer />
@@ -135,7 +135,7 @@ function Skills() {
 
       <div className="grid grid-cols-1 grid-rows-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {skills.map((skill) => (
-          <Card key={skill.title} variant="border" className="bg-gradient-to-b">
+          <Card key={skill.title} variant="border" className="bg-">
             {skill.icon}
             <h2 className="card-title">{skill.title}</h2>
             <div className="mt-5 card-actions">
@@ -169,7 +169,7 @@ function Projects() {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {Object.entries(projects)
-          .slice(0, 2)
+          .slice(0, 4)
           .map(([id, project]) => (
             <div
               className="duration-200 shadow-md card hover:shadow-xl"
@@ -193,7 +193,7 @@ function Projects() {
                   ))}
                 </div>
 
-                <div className="card-actions justify-end">
+                {/* <div className="card-actions justify-end">
                   <CursorObserver state={"link"}>
                     <Link href={`/projects/${id}`}>
                       <button className="btn btn-primary gap-2">
@@ -202,7 +202,7 @@ function Projects() {
                       </button>
                     </Link>
                   </CursorObserver>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
@@ -309,7 +309,7 @@ function SectionHeading({
   return (
     <h1
       className={twMerge(
-        "text-2xl mb-8 w-fit font-bold uppercase bg-gradient-to-r from-primary to-secondary bg-[length:100%_9px] bg-no-repeat bg-bottom",
+        "text-2xl mb-8 w-fit font-bold uppercase bg-gradient-to-r from-primary to-secondary bg-[length:100%_7px] bg-no-repeat bg-bottom",
         className
       )}
     >
