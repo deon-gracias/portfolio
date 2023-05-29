@@ -209,6 +209,76 @@ export const experiences = [
   },
 ];
 
+export const certifications = [
+  {
+    image:
+      "https://yt3.googleusercontent.com/ytc/AGIKgqNbvzXnkrX4r3t8S2BcmDbHHJIWycRczP41tHBazA=s900-c-k-c0x00ffffff-no-rj",
+    title: "Technology Virtual Experience Program",
+    organization: "Deloitte",
+    credentialUrl:
+      "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Deloitte%20Australia/YPWCiGNTkr6QxcpEu_Deloitte%20Australia_87eiBXZRmKn5Ahky9_1677270694510_completion_certificate.pdf",
+    issued: new Date("2023-02-24"),
+  },
+  {
+    image:
+      "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png",
+    title: "Intermediate Machine Learning",
+    organization: "Kaggle",
+    credentialUrl:
+      "https://www.kaggle.com/learn/certification/deongracias/intermediate-machine-learning",
+    issued: new Date("2023-02-23"),
+  },
+  {
+    image:
+      "https://api.badgr.io/public/assertions/MGQ11XpvT0WhaZCrU7i2Ug/image",
+    title: "Postman Student Expert",
+    organization: "Postman",
+    credentialUrl:
+      "https://api.badgr.io/public/assertions/MGQ11XpvT0WhaZCrU7i2Ug",
+    issued: new Date("2022-09-8"),
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/HackerRank_Icon-1000px.png/600px-HackerRank_Icon-1000px.png?20200508182226",
+    title: "SQL Advanced Certificate",
+    organization: "HackerRank",
+    credentialUrl: "https://www.hackerrank.com/certificates/acba46d823f9",
+    issued: new Date("2022-06-21"),
+  },
+  {
+    image:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/HackerRank_Icon-1000px.png/600px-HackerRank_Icon-1000px.png?20200508182226",
+    title: "REST API Intermediate Certificate",
+    organization: "HackerRank",
+    credentialUrl: "https://www.hackerrank.com/certificates/6b2a5d63d1d4",
+    issued: new Date("2022-06-21"),
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/HackerRank_Icon-1000px.png/600px-HackerRank_Icon-1000px.png?20200508182226",
+    title: "JavaScript Intermediate Certificate",
+    organization: "HackerRank",
+    credentialUrl: "https://www.hackerrank.com/certificates/c263cb0f03cc",
+    issued: new Date("2022-05-6"),
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/HackerRank_Icon-1000px.png/600px-HackerRank_Icon-1000px.png?20200508182226",
+    title: "Problem Solving Intermediate",
+    organization: "HackerRank",
+    credentialUrl: "https://www.hackerrank.com/certificates/74d34f0f3994",
+    issued: new Date("2021-09-21"),
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/588px-Google_%22G%22_Logo.svg.png?20230305195327",
+    title: "Google Analytics for Beginners",
+    organization: "Google",
+    credentialUrl: "https://analytics.google.com/analytics/academy/certificate/-33pTmteReGnyMYkcZ9Y7A",
+    issued: new Date("2021-04-23"),
+  },
+];
+
 interface ProjectType {
   [key: string]: {
     title: string;

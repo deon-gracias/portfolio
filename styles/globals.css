@@ -10,10 +10,6 @@
 }
 
 @layer utilities {
-  * {
-    cursor: none;
-  }
-
   .cursor {
     position: fixed;
     left: 0;

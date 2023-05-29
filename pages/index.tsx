@@ -6,13 +6,13 @@ import {
   IconChevronDown,
   IconExternalLink,
   IconFileCv,
-  IconLink,
 } from "@tabler/icons-react";
 import DrawerLayout from "../components/DrawerLayout";
 import { twMerge } from "tailwind-merge";
 import {
   educations,
   experiences,
+  certifications,
   projects,
   resume,
   skills,
@@ -20,9 +20,11 @@ import {
 } from "../data/portfolio";
 import { IconWorldShare } from "@tabler/icons-react";
 import Link from "next/link";
-import { skill_badges_mono } from "../data/skill-badges";
+import { skill_badges, skill_badges_mono } from "../data/skill-badges";
 import CursorObserver from "../components/CursorObserver";
 import { useScrollContainer } from "react-indiana-drag-scroll";
+import Image from "next/image";
+import moment from "moment";
 
 export default function Home() {
   return (
@@ -33,6 +35,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Experience />
+      <Certifications />
       <Education />
 
       <Footer />
@@ -158,6 +161,7 @@ function Skills() {
                   key={item.image}
                 >
                   <img
+                    loading="lazy"
                     className="w-full h-full"
                     src={item.image}
                     alt={item.name}
@@ -198,6 +202,7 @@ function Projects() {
                       key={item}
                     >
                       <img
+                        loading="lazy"
                         className="w-full h-full"
                         src={skill_badges_mono[item]}
                         alt={item}
@@ -273,6 +278,48 @@ function Experience() {
               </div>
             </div>
           </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Certifications() {
+  return (
+    <section
+      id="certifications"
+      className="w-full px-4 py-16 mx-auto max-w-7xl"
+    >
+      <SectionHeading className="flex justify-center" title="certifications" />
+
+      <div className="grid bg-base-200 gap-0.5 p-0.5 md:grid-cols-2">
+        {certifications.map((certification) => (
+          <CursorObserver state="action" key={certification.credentialUrl}>
+            <a
+              target="blank"
+              href={certification.credentialUrl}
+              className="duration-200 flex items-center bg-base-100 h-full w-full justify-between p-4 hover:bg-primary hover:text-primary-content hover:shadow-2xl hover:scale-105"
+            >
+              <div className="flex items-center gap-3">
+                <div className="avatar">
+                  <div className="w-12 rounded-full outline outline-1 outline-offset-4 outline-base-content/40">
+                    <img
+                      loading="lazy"
+                      src={certification.image}
+                      alt={certification.title}
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col ml-4">
+                  <h2 className="font-bold text-lg">
+                    {certification.title}
+                  </h2>
+                  <p>{certification.organization}</p>
+                  <p>{moment(certification.issued).format("MMMM D, YYYY")}</p>
+                </div>
+              </div>
+            </a>
+          </CursorObserver>
         ))}
       </div>
     </section>

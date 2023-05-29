@@ -76,6 +76,8 @@ export const skill_badges: SkillBadgeType = {
     "https://img.shields.io/badge/Electron-47848F.svg?style=for-the-badge&logo=Electron&logoColor=white",
   sqlserver:
     "https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white",
+  kaggle:
+    "https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white",
 };
 
 export const skill_badges_mono: SkillBadgeType = {
@@ -152,4 +154,6 @@ export const skill_badges_mono: SkillBadgeType = {
     "https://img.shields.io/badge/Electron-fff.svg?style=for-the-badge&logo=Electron&logoColor=black",
   sqlserver:
     "https://img.shields.io/badge/Microsoft%20SQL%20Server-fff?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=black",
+  kaggle:
+    "https://img.shields.io/badge/Kaggle-fff?style=for-the-badge&logo=kaggle&logoColor=black",
 };
