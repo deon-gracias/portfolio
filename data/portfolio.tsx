@@ -74,7 +74,7 @@ export const skills = [
     icon: <IconRobot size={40} />,
     items: [
       { name: "Tensorflow", image: skill_badges_mono.tensorflow },
-      { name: "Scikit Learn", image: skill_badges_mono.scikitlearn },
+      { name: "Scikit", image: skill_badges_mono.scikit },
       { name: "Pandas", image: skill_badges_mono.pandas },
       { name: "NumPy", image: skill_badges_mono.numpy },
       { name: "Matplotlib", image: skill_badges_mono.matplotlib },
@@ -247,7 +247,7 @@ export const certifications = [
   },
   {
     image:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/HackerRank_Icon-1000px.png/600px-HackerRank_Icon-1000px.png?20200508182226",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/HackerRank_Icon-1000px.png/600px-HackerRank_Icon-1000px.png?20200508182226",
     title: "REST API Intermediate Certificate",
     organization: "HackerRank",
     credentialUrl: "https://www.hackerrank.com/certificates/6b2a5d63d1d4",
@@ -274,7 +274,8 @@ export const certifications = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/588px-Google_%22G%22_Logo.svg.png?20230305195327",
     title: "Google Analytics for Beginners",
     organization: "Google",
-    credentialUrl: "https://analytics.google.com/analytics/academy/certificate/-33pTmteReGnyMYkcZ9Y7A",
+    credentialUrl:
+      "https://analytics.google.com/analytics/academy/certificate/-33pTmteReGnyMYkcZ9Y7A",
     issued: new Date("2021-04-23"),
   },
 ];
@@ -299,6 +300,8 @@ export const projects: ProjectType = {
       "firebase",
       "flask",
       "arduino",
+      "tensorflow",
+      "scikit",
     ],
     links: [
       {
@@ -316,13 +319,13 @@ export const projects: ProjectType = {
   "tree-transparency": {
     title: "Tree Transparency",
     description: <>Web & Blockchain</>,
-    technologies: ["nextjs", "firebase", "solidity", "ipfs"],
+    technologies: ["nextjs", "firebase", "solidity", "ethersjs", "ipfs"],
     links: [],
   },
   // edutube: {},
   "hotel-bookings-analysis": {
     title: "Hotel Bookings Analysis",
-    description: <>Data Analysia & Visualization</>,
+    description: <>Data Analysis & Visualization</>,
     technologies: ["powerbi", "sqlserver"],
     links: [
       {
