@@ -12,6 +12,7 @@ import { IconDownload, IconExternalLink } from "@tabler/icons-react";
 import { cursorStore } from "../store/cursor-store";
 import { twMerge } from "tailwind-merge";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { cursor, setCursor } = cursorStore();
@@ -44,6 +45,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <AnimatePresence initial={false}>
+      <Head>
+        <title>Deon Gracias - Portfolio</title>
+      </Head>
       <motion.div
         key="cursor"
         className={twMerge(
