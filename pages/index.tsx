@@ -302,7 +302,7 @@ function Certifications() {
             >
               <div className="flex items-center gap-3">
                 <div className="avatar">
-                  <div className="w-12 rounded-full outline outline-1 outline-offset-4 outline-base-content/40">
+                  <div className="bg-base-100 w-12 rounded-full outline outline-1 outline-offset-4 outline-base-content/40">
                     <img
                       loading="lazy"
                       src={certification.image}
