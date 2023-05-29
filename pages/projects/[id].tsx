@@ -11,6 +11,7 @@ import DrawerLayout from "../../components/DrawerLayout";
 import { IconArrowBackUp } from "@tabler/icons-react";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeDocument from "rehype-document";
 import rehypeFormat from "rehype-format";
@@ -36,7 +37,7 @@ export default function Project({
         <IconArrowBackUp /> Back
       </button>
 
-      <div className="px-4 py-12 mx-auto grow max-w-7xl">
+      <div className="px-4 mt-16 py-12 mx-auto grow w-full max-w-4xl">
         <h1 className="mb-10 text-5xl font-bold">{project.metadata.title}</h1>
 
         <div className="mb-4 space-x-2">
@@ -48,7 +49,7 @@ export default function Project({
             ))}
         </div>
         <div
-          className="prose"
+          className="prose mx-auto max-w-full"
           dangerouslySetInnerHTML={{ __html: project.contentHtml }}
         ></div>
       </div>
@@ -70,6 +71,7 @@ export async function getProject(id: string) {
     .use(remarkParse)
     .use(remarkToc, { tight: true, prefix: "user-content-" })
     .use(remarkRehype, { allowDangerousHtml: true })
+    .use(remarkGfm)
     .use(rehypeDocument)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings)
