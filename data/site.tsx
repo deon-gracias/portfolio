@@ -1,9 +1,12 @@
+import { IconBriefcase, IconFileCertificate, IconFileDescription, IconHome, IconSchool, IconTools } from "@tabler/icons-react";
+
 export const nav_items = [
-  { name: "Home", href: "/#home" },
-  { name: "Skills", href: "/#skills" },
-  { name: "Projects", href: "/#projects" },
-  { name: "Experience", href: "/#experience" },
-  { name: "Education", href: "/#education" },
+  { name: "Home", href: "/#home", icon: <IconHome /> },
+  { name: "Skills", href: "/#skills", icon: <IconTools /> },
+  { name: "Projects", href: "/#projects", icon: <IconBriefcase /> },
+  { name: "Experience", href: "/#experience",icon: <IconFileDescription /> },
+  { name: "Certifications", href: "/#certifications", icon: <IconFileCertificate /> },
+  { name: "Education", href: "/#education", icon:<IconSchool /> },
 ];
 
 export const themes = [
