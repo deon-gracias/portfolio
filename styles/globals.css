@@ -3,13 +3,19 @@
 @tailwind utilities;
 
 .splide__pagination__page {
-  opacity: 1;
   @apply bg-base-300;
 }
 
 .splide__pagination__page.is-active {
-  opacity: 1;
   @apply bg-accent;
+}
+
+.splide__arrow {
+  @apply rounded-full p-3 w-fit h-fit bg-base-100 hover:bg-primary duration-200 hover:text-primary-content;
+}
+
+.splide__arrow:hover svg {
+  @apply fill-primary-content;
 }
 
 @layer base {
