@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren,  } from "react";
 import {
   IconCertificate,
   IconChevronDown,
@@ -20,11 +20,11 @@ import {
 } from "../data/portfolio";
 import { IconWorldShare } from "@tabler/icons-react";
 import Link from "next/link";
-import { skill_badges, skill_badges_mono } from "../data/skill-badges";
+import { skill_badges_mono } from "../data/skill-badges";
 import CursorObserver from "../components/CursorObserver";
-import { useScrollContainer } from "react-indiana-drag-scroll";
-import Image from "next/image";
 import moment from "moment";
+import { Autoplay, FreeMode,  Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Home() {
   return (
@@ -133,44 +133,55 @@ function Socials() {
 }
 
 function Skills() {
-  const scrollContainer = useScrollContainer();
-
   return (
     <section id="skills" className="w-full pt-24 pb-16 mx-auto max-w-7xl">
       <SectionHeading className="ml-4 flex justify-center" title="Skills" />
 
-      <div
-        ref={scrollContainer.ref}
-        className="flex pb-4 overflow-x-auto overflow-y-visible"
-      >
-        {skills.map((skill, index) => (
-          <Card
-            key={skill.title}
-            variant="border"
-            className={twMerge(
-              "mr-6 w-72 h-96 flex-grow-0 flex-shrink-0",
-              index === 0 ? "ml-4" : index === skills.length - 1 && "mr-4"
-            )}
-          >
-            {skill.icon}
-            <h2 className="card-title">{skill.title}</h2>
-            <div className="mt-5 card-actions">
-              {skill.items.map((item) => (
-                <div
-                  className="overflow-hidden duration-200 border rounded-full hover:border-primary"
-                  key={item.image}
-                >
-                  <img
-                    loading="lazy"
-                    className="w-full h-full"
-                    src={item.image}
-                    alt={item.name}
-                  />
+      <div className="mx-4">
+        <Swiper
+          slidesPerView={"auto"}
+          spaceBetween={10}
+          freeMode={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+            renderBullet: function (index, className) {
+              return `<span class="${className}"></span>`;
+            },
+          }}
+          modules={[FreeMode, Pagination, Autoplay]}
+          className="w-full h-full"
+        >
+          {skills.map((skill, index) => (
+            <SwiperSlide className="w-80 h-[350px]" key={skill.title}>
+              <Card
+                variant="border"
+                className={"w-full h-full flex-grow-0 flex-shrink-0"}
+              >
+                {skill.icon}
+                <h2 className="card-title">{skill.title}</h2>
+                <div className="mt-5 card-actions">
+                  {skill.items.map((item) => (
+                    <div
+                      className="overflow-hidden duration-200 border rounded-full hover:border-primary"
+                      key={item.image}
+                    >
+                      <img
+                        loading="lazy"
+                        className="w-full h-full"
+                        src={item.image}
+                        alt={item.name}
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </Card>
-        ))}
+              </Card>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
@@ -311,11 +322,11 @@ function Certifications() {
                   </div>
                 </div>
                 <div className="flex flex-col ml-4">
-                  <h2 className="font-bold text-lg">
-                    {certification.title}
-                  </h2>
+                  <h2 className="font-bold text-lg">{certification.title}</h2>
                   <p>{certification.organization}</p>
-                  <p className="text-sm opacity-70">{moment(certification.issued).format("MMMM D, YYYY")}</p>
+                  <p className="text-sm opacity-70">
+                    {moment(certification.issued).format("MMMM D, YYYY")}
+                  </p>
                 </div>
               </div>
             </a>

@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 10px;
+
+  opacity: 0.8;
+
+  @apply text-sm bg-neutral-content border border-neutral duration-200;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  @apply bg-accent text-primary-content;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

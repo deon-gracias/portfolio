@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { themeChange } from "theme-change";
 import {
@@ -13,6 +12,12 @@ import { cursorStore } from "../store/cursor-store";
 import { twMerge } from "tailwind-merge";
 import { useRouter } from "next/router";
 import Head from "next/head";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { cursor, setCursor } = cursorStore();
