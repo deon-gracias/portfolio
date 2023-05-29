@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
-import { PropsWithChildren,  } from "react";
+import { PropsWithChildren } from "react";
 import {
   IconCertificate,
   IconChevronDown,
@@ -23,8 +24,8 @@ import Link from "next/link";
 import { skill_badges_mono } from "../data/skill-badges";
 import CursorObserver from "../components/CursorObserver";
 import moment from "moment";
-import { Autoplay, FreeMode,  Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 export default function Home() {
   return (
@@ -115,7 +116,7 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
 
 function Socials() {
   return (
-    <ul className="fixed bg-base-200/50 border-primary right-0 z-50 -translate-y-1/2 shadow-xl top-1/2 menu rounded-l-box">
+    <ul className="fixed bg-base-200/50 border-primary right-0 z-50 -translate-y-1/2 shadow-xl top-3/4 menu rounded-l-box">
       {socials.map((social) => (
         <li
           key={social.name}
@@ -137,52 +138,48 @@ function Skills() {
     <section id="skills" className="w-full pt-24 pb-16 mx-auto max-w-7xl">
       <SectionHeading className="ml-4 flex justify-center" title="Skills" />
 
-      <div className="mx-4">
-        <Swiper
-          slidesPerView={"auto"}
-          spaceBetween={10}
-          freeMode={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-            renderBullet: function (index, className) {
-              return `<span class="${className}"></span>`;
-            },
-          }}
-          modules={[FreeMode, Pagination, Autoplay]}
-          className="w-full h-full"
-        >
-          {skills.map((skill, index) => (
-            <SwiperSlide className="w-80 h-[350px]" key={skill.title}>
-              <Card
-                variant="border"
-                className={"w-full h-full flex-grow-0 flex-shrink-0"}
-              >
-                {skill.icon}
-                <h2 className="card-title">{skill.title}</h2>
-                <div className="mt-5 card-actions">
-                  {skill.items.map((item) => (
-                    <div
-                      className="overflow-hidden duration-200 border rounded-full hover:border-primary"
-                      key={item.image}
-                    >
-                      <img
-                        loading="lazy"
-                        className="w-full h-full"
-                        src={item.image}
-                        alt={item.name}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <Splide
+        options={{
+          gap: 10,
+          type: "loop",
+          drag: "free",
+          focus: "center",
+          autoWidth: true,
+          autoScroll: {
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            rewind: false,
+            speed: 1,
+          },
+        }}
+        extensions={{ AutoScroll }}
+      >
+        {skills.map((skill, index) => (
+          <SplideSlide className="h-[350px] w-80" key={skill.title}>
+            <Card
+              variant="border"
+              className="w-full h-full flex-grow-0 flex-shrink-0"
+            >
+              {skill.icon}
+              <h2 className="card-title">{skill.title}</h2>
+              <div className="mt-5 card-actions">
+                {skill.items.map((item) => (
+                  <div
+                    className="overflow-hidden duration-200 border rounded-full hover:border-primary"
+                    key={item.image}
+                  >
+                    <img
+                      className="w-full h-full"
+                      src={item.image}
+                      alt={item.name}
+                    />
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </SplideSlide>
+        ))}
+      </Splide>
     </section>
   );
 }

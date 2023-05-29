@@ -2,20 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  line-height: 10px;
-
-  opacity: 0.8;
-
-  @apply text-sm bg-neutral-content border border-neutral duration-200;
+.splide__pagination__page {
+  opacity: 1;
+  @apply bg-base-300;
 }
 
-.swiper-pagination-bullet-active {
+.splide__pagination__page.is-active {
   opacity: 1;
-  @apply bg-accent text-primary-content;
+  @apply bg-accent;
 }
 
 @layer base {

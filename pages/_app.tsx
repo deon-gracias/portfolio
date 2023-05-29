@@ -13,10 +13,7 @@ import { twMerge } from "tailwind-merge";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import "@splidejs/react-splide/css";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
