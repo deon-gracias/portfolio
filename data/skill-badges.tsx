@@ -38,7 +38,7 @@ export const skill_badges: SkillBadgeType = {
     "https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white",
   tensorflow:
     "https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white",
-  scikitlearn:
+  scikit:
     "https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white",
   pandas:
     "https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white",
@@ -116,7 +116,7 @@ export const skill_badges_mono: SkillBadgeType = {
     "https://img.shields.io/badge/Flutter-fff?style=for-the-badge&logo=flutter&logoColor=black",
   tensorflow:
     "https://img.shields.io/badge/TensorFlow-fff?style=for-the-badge&logo=tensorflow&logoColor=black",
-  scikitlearn:
+  scikit:
     "https://img.shields.io/badge/scikit-fff?style=for-the-badge&logo=scikit-learn&logoColor=black",
   pandas:
     "https://img.shields.io/badge/pandas-fff?style=for-the-badge&logo=pandas&logoColor=black",
