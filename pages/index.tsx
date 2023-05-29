@@ -294,7 +294,7 @@ function Certifications() {
 
       <div className="grid bg-base-200 gap-0.5 p-0.5 md:grid-cols-2">
         {certifications.map((certification) => (
-          <CursorObserver state="action" key={certification.credentialUrl}>
+          <CursorObserver state="link" key={certification.credentialUrl}>
             <a
               target="blank"
               href={certification.credentialUrl}
