@@ -315,7 +315,7 @@ function Certifications() {
                     {certification.title}
                   </h2>
                   <p>{certification.organization}</p>
-                  <p>{moment(certification.issued).format("MMMM D, YYYY")}</p>
+                  <p className="text-sm opacity-70">{moment(certification.issued).format("MMMM D, YYYY")}</p>
                 </div>
               </div>
             </a>
