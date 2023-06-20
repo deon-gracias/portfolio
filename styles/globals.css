@@ -14,6 +14,11 @@
   @apply rounded-full p-3 w-fit h-fit bg-base-100 hover:bg-primary duration-200 hover:text-primary-content;
 }
 
+.splide__arrow svg {
+  @apply fill-base-content;
+}
+
+
 .splide__arrow:hover svg {
   @apply fill-primary-content;
 }

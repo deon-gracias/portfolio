@@ -140,6 +140,7 @@ export const skills = [
 export const experiences = [
   {
     company: "Skinzy Software Solutions",
+    image: "https://media.licdn.com/dms/image/C4D0BAQFwq94aaHO6Mw/company-logo_200_200/0/1657880937495?e=1695254400&v=beta&t=uc1-RlDWy8O5JaJtK5zsws3yJvgW3kJWvdlDn2hy_YE",
     website: "https://skinzy.in/",
     post: "Mobile Developer",
     type: "Internship",
@@ -160,6 +161,8 @@ export const experiences = [
   },
   {
     company: "Static Int. Educare",
+    image:
+      "https://skinzy.in/static/media/logo-transparent-background.8d754bd6e489edf2f14d.png",
     website: "http://staticinteducare.in/upskilling.html",
     post: "Mentor",
     type: "Part Time",
@@ -209,6 +212,28 @@ export const experiences = [
   },
 ];
 
+export const pos = [
+  {
+    image:
+      "https://api.badgr.io/public/assertions/J3AEpEaPQya53AU6avQaBg/image",
+    title: "Postman Student Lead",
+    organization: "Postman",
+    organizationUrl: "https://www.postman.com/",
+    certificateUrl:
+      "https://api.badgr.io/public/assertions/J3AEpEaPQya53AU6avQaBg",
+    start: "July 2023",
+  },
+  {
+    image: "https://avatars.githubusercontent.com/u/111590759?s=200&v=4",
+    title: "GDSC Co Lead",
+    organization: "Google Developer Students Club CRCE",
+    organizationUrl: "https://crce-gdsc.github.io/",
+    certificateUrl: "",
+    start: "July 2022",
+    end: "July 2023",
+  },
+];
+
 export const certifications = [
   {
     image:
@@ -230,12 +255,21 @@ export const certifications = [
   },
   {
     image:
-      "https://api.badgr.io/public/assertions/MGQ11XpvT0WhaZCrU7i2Ug/image",
-    title: "Postman Student Expert",
+      "https://api.badgr.io/public/assertions/J3AEpEaPQya53AU6avQaBg/image",
+    title: "Postman Student Leader",
     organization: "Postman",
     credentialUrl:
-      "https://api.badgr.io/public/assertions/MGQ11XpvT0WhaZCrU7i2Ug",
-    issued: new Date("2022-09-8"),
+      "https://api.badgr.io/public/assertions/J3AEpEaPQya53AU6avQaBg",
+    issued: new Date("2023-06-19"),
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/588px-Google_%22G%22_Logo.svg.png?20230305195327",
+    title: "Google Analytics for Beginners",
+    organization: "Google",
+    credentialUrl:
+      "https://analytics.google.com/analytics/academy/certificate/-33pTmteReGnyMYkcZ9Y7A",
+    issued: new Date("2021-04-23"),
   },
   {
     image:
@@ -268,15 +302,6 @@ export const certifications = [
     organization: "HackerRank",
     credentialUrl: "https://www.hackerrank.com/certificates/74d34f0f3994",
     issued: new Date("2021-09-21"),
-  },
-  {
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/588px-Google_%22G%22_Logo.svg.png?20230305195327",
-    title: "Google Analytics for Beginners",
-    organization: "Google",
-    credentialUrl:
-      "https://analytics.google.com/analytics/academy/certificate/-33pTmteReGnyMYkcZ9Y7A",
-    issued: new Date("2021-04-23"),
   },
 ];
 

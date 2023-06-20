@@ -1,31 +1,33 @@
 /* eslint-disable @next/next/no-img-element */
-import Footer from "../components/Footer";
-import Logo from "../components/Logo";
-import { PropsWithChildren } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import {
   IconCertificate,
   IconChevronDown,
   IconExternalLink,
   IconFileCv,
+  IconWorldShare,
 } from "@tabler/icons-react";
-import DrawerLayout from "../components/DrawerLayout";
+import { motion, useAnimation } from "framer-motion";
+import moment from "moment";
+import Link from "next/link";
+import { PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
+import CursorObserver from "../components/CursorObserver";
+import DrawerLayout from "../components/DrawerLayout";
+import Footer from "../components/Footer";
+import Logo from "../components/Logo";
 import {
+  certifications,
   educations,
   experiences,
-  certifications,
+  pos,
   projects,
   resume,
   skills,
   socials,
 } from "../data/portfolio";
-import { IconWorldShare } from "@tabler/icons-react";
-import Link from "next/link";
 import { skill_badges_mono } from "../data/skill-badges";
-import CursorObserver from "../components/CursorObserver";
-import moment from "moment";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 export default function Home() {
   return (
@@ -36,6 +38,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Experience />
+      <PositionOfResponsibility />
       <Certifications />
       <Education />
 
@@ -50,37 +53,53 @@ function Hero() {
       id="home"
       className="grid md:grid-cols-[2fr_1fr] mt-14 gap-6 px-4 max-w-7xl mx-auto"
     >
-      <Card variant="glow" className="order-2 md:order-1">
-        <h1 className="text-5xl font-bold">Hello I am Deon Gracias</h1>
-        <h2 className="pt-1 text-xl font-bold">
-          Full-Stack Web and App Developer.
-        </h2>
-        <p className="pt-3 pb-6">
-          Strong engineering professional, pursuing Bachelor of Engineering
-          focused in Computer Engineering from Fr. Conceicao Rodrigues College
-          of Engineering.
-        </p>
-        <div className="flex gap-2">
-          <CursorObserver state="download">
-            <a
-              target="blank"
-              href={resume}
-              className="gap-1 border-none btn btn-primary"
-            >
-              <IconFileCv /> Resume
-            </a>
-          </CursorObserver>
-          <CursorObserver state="action">
-            <a href="#skills" className="gap-1 btn btn-ghost">
-              More <IconChevronDown size={20} />
-            </a>
-          </CursorObserver>
-        </div>
-      </Card>
+      <motion.div
+        key="hero__body"
+        initial={{ x: -300, opacity: 0.5 }}
+        exit={{ x: -300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Card variant="glow" className="order-2 md:order-1">
+          <h1 className="text-5xl font-bold">Hello I am Deon Gracias</h1>
+          <h2 className="pt-1 text-xl font-bold">
+            Full-Stack Web and App Developer.
+          </h2>
+          <p className="pt-3 pb-6">
+            Strong engineering professional, pursuing Bachelor of Engineering
+            focused in Computer Engineering from Fr. Conceicao Rodrigues College
+            of Engineering.
+          </p>
+          <div className="flex gap-2">
+            <CursorObserver state="download">
+              <a
+                target="blank"
+                href={resume}
+                className="gap-1 border-none btn btn-primary"
+              >
+                <IconFileCv /> Resume
+              </a>
+            </CursorObserver>
+            <CursorObserver state="action">
+              <a href="#skills" className="gap-1 btn btn-ghost">
+                More <IconChevronDown size={20} />
+              </a>
+            </CursorObserver>
+          </div>
+        </Card>
+      </motion.div>
 
-      <div className="grid order-1 py-20 shadow-xl md:order-2 bg-size-200 bg-gradient-to-tr animate-gradient-xy-8 from-primary to-secondary card-body card place-items-center md:py-0">
-        <Logo className="fill-primary-content" />
-      </div>
+      <motion.div
+        key="hero__image"
+        initial={{ x: 300, opacity: 0.5 }}
+        exit={{ x: 300, opacity: 0.5 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="h-full w-full grid order-1 py-20 shadow-xl md:order-2 bg-size-200 bg-gradient-to-tr animate-gradient-xy-8 from-primary to-secondary card-body card place-items-center md:py-0">
+          <Logo className="fill-primary-content" />
+        </div>
+      </motion.div>
     </div>
   );
 }
@@ -116,7 +135,7 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
 
 function Socials() {
   return (
-    <ul className="fixed bg-base-200/50 border-primary right-0 z-50 -translate-y-1/2 shadow-xl top-3/4 menu rounded-l-box">
+    <ul className="fixed bg-base-200/50 border-primary right-0 z-50 -translate-y-1/2 shadow-xl top-3/4 menu rounded-l-box backdrop-blur-sm">
       {socials.map((social) => (
         <li
           key={social.name}
@@ -146,8 +165,8 @@ function Skills() {
           focus: "center",
           autoWidth: true,
           autoScroll: {
-            pauseOnHover: false,
-            pauseOnFocus: false,
+            pauseOnHover: true,
+            pauseOnFocus: true,
             rewind: false,
             speed: 1,
           },
@@ -185,6 +204,8 @@ function Skills() {
 }
 
 function Projects() {
+  const controls = useAnimation();
+
   return (
     <section
       id="projects"
@@ -196,41 +217,40 @@ function Projects() {
         {Object.entries(projects)
           .slice(0, 4)
           .map(([id, project]) => (
-            <div
-              className="duration-200 shadow-md card hover:shadow-xl"
-              key={`${project.title}`}
-            >
-              <div className="card-body">
-                <h2 className="card-title">{project.title}</h2>
-                <p>{project.description}</p>
-                <div className="flex gap-1 my-2 flex-wrap">
-                  {project.technologies.map((item) => (
-                    <div
-                      className="overflow-hidden duration-200 border rounded-full hover:border-primary"
-                      key={item}
-                    >
-                      <img
-                        loading="lazy"
-                        className="w-full h-full"
-                        src={skill_badges_mono[item]}
-                        alt={item}
-                      />
-                    </div>
-                  ))}
-                </div>
+            <motion.div key={`${project.title}-${id}`}>
+              <div className="duration-200 h-full shadow-md card hover:shadow-xl">
+                <div className="card-body">
+                  <h2 className="card-title">{project.title}</h2>
+                  <p>{project.description}</p>
+                  <div className="flex gap-1 my-2 flex-wrap">
+                    {project.technologies.map((item) => (
+                      <div
+                        className="overflow-hidden duration-200 border rounded-full hover:border-primary"
+                        key={item}
+                      >
+                        <img
+                          loading="lazy"
+                          className="w-full h-full"
+                          src={skill_badges_mono[item]}
+                          alt={item}
+                        />
+                      </div>
+                    ))}
+                  </div>
 
-                <div className="card-actions justify-end">
-                  <CursorObserver state={"link"}>
-                    <Link href={`/projects/${id}`}>
-                      <button className="btn btn-primary gap-2">
-                        <IconExternalLink />
-                        View
-                      </button>
-                    </Link>
-                  </CursorObserver>
+                  <div className="card-actions justify-end">
+                    <CursorObserver state={"link"}>
+                      <Link href={`/projects/${id}`}>
+                        <button className="btn btn-primary gap-2">
+                          <IconExternalLink />
+                          View
+                        </button>
+                      </Link>
+                    </CursorObserver>
+                  </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
       </div>
 
@@ -255,6 +275,11 @@ function Experience() {
             key={`${experience.company}-${experience.post}`}
           >
             <div className="card-body">
+              {/* <img
+                className="rounded-full w-20 h-20 mb-2"
+                src={experience.image}
+                alt={experience.company}
+              /> */}
               <h2 className="card-title">{experience.post}</h2>
               <h3 className="flex items-center gap-1">
                 {experience.company}
@@ -292,6 +317,66 @@ function Experience() {
   );
 }
 
+function PositionOfResponsibility() {
+  return (
+    <section id="pos" className="w-full px-4 py-16 mx-auto max-w-7xl">
+      <SectionHeading
+        className="flex justify-center"
+        title="Position of Responsibility"
+      />
+
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {pos.map((pos) => (
+          <div
+            className="duration-200 card-compact shadow-md card hover:shadow-xl"
+            key={`${pos.organization}-${pos.title}`}
+          >
+            <div className="card-body">
+              <img
+                className="rounded-full w-20 h-20 mb-2"
+                src={pos.image}
+                alt={pos.title}
+              />
+              <h2 className="card-title">{pos.title}</h2>
+              <h3 className="flex items-center gap-1">
+                {pos.organization}
+                <CursorObserver state={"action"}>
+                  <a
+                    className="text-secondary"
+                    target="blank"
+                    href={pos.organizationUrl}
+                  >
+                    <IconWorldShare size={20} />
+                  </a>
+                </CursorObserver>
+              </h3>
+              {pos.end ? (
+                <p className="text-sm">
+                  {pos.start} - {pos.end}
+                </p>
+              ) : (
+                <p className="text-sm">
+                  {pos.start}
+                  <span className="badge badge-primary ml-4">Active</span>
+                </p>
+              )}
+              <div className="justify-end card-actions">
+                <CursorObserver state={"link"}>
+                  <a target="blank" href={pos.certificateUrl}>
+                    <button className="btn btn-circle btn-primary">
+                      <IconCertificate />
+                    </button>
+                  </a>
+                </CursorObserver>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Certifications() {
   return (
     <section
@@ -312,7 +397,7 @@ function Certifications() {
                 <div className="avatar">
                   <div className="bg-base-100 w-12 rounded-full outline outline-1 outline-offset-4 outline-base-content/40">
                     <img
-                      loading="lazy"
+                      loading="eager"
                       src={certification.image}
                       alt={certification.title}
                     />
