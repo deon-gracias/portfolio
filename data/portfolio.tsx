@@ -228,7 +228,7 @@ export const pos = [
     title: "GDSC Co Lead",
     organization: "Google Developer Students Club CRCE",
     organizationUrl: "https://crce-gdsc.github.io/",
-    certificateUrl: "",
+    certificateUrl: "https://drive.google.com/file/d/1p5Rzu9vDGMBmKNdpFuBg5QYrnFtwY236/view?usp=drive_link",
     start: "July 2022",
     end: "July 2023",
   },
