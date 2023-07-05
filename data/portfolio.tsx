@@ -220,7 +220,7 @@ export const pos = [
     organization: "Postman",
     organizationUrl: "https://www.postman.com/",
     certificateUrl:
-      "https://api.badgr.io/public/assertions/J3AEpEaPQya53AU6avQaBg",
+      "https://badgr.com/public/assertions/J3AEpEaPQya53AU6avQaBg?identity__email=deongracias1@gmail.com",
     start: "July 2023",
   },
   {
@@ -259,7 +259,7 @@ export const certifications = [
     title: "Postman Student Leader",
     organization: "Postman",
     credentialUrl:
-      "https://api.badgr.io/public/assertions/J3AEpEaPQya53AU6avQaBg",
+      "https://badgr.com/public/assertions/J3AEpEaPQya53AU6avQaBg?identity__email=deongracias1@gmail.com",
     issued: new Date("2023-06-19"),
   },
   {
