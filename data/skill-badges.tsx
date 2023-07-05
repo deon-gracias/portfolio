@@ -78,6 +78,8 @@ export const skill_badges: SkillBadgeType = {
     "https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white",
   kaggle:
     "https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white",
+  opencv:
+    "https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white"
 };
 
 export const skill_badges_mono: SkillBadgeType = {
@@ -156,4 +158,6 @@ export const skill_badges_mono: SkillBadgeType = {
     "https://img.shields.io/badge/Microsoft%20SQL%20Server-fff?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=black",
   kaggle:
     "https://img.shields.io/badge/Kaggle-fff?style=for-the-badge&logo=kaggle&logoColor=black",
+  opencv:
+    "https://img.shields.io/badge/opencv-fff?style=for-the-badge&logo=opencv&logoColor=black"
 };

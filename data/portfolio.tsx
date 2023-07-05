@@ -344,7 +344,7 @@ export const projects: ProjectType = {
   "tree-transparency": {
     title: "Tree Transparency",
     description: <>Web & Blockchain</>,
-    technologies: ["nextjs", "firebase", "solidity", "ethersjs", "ipfs"],
+    technologies: ["nextjs", "firebase", "solidity", "ethersjs", "ipfs", "opencv"],
     links: [],
   },
   // edutube: {},
