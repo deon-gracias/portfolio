@@ -140,7 +140,8 @@ export const skills = [
 export const experiences = [
   {
     company: "Skinzy Software Solutions",
-    image: "https://media.licdn.com/dms/image/C4D0BAQFwq94aaHO6Mw/company-logo_200_200/0/1657880937495?e=1695254400&v=beta&t=uc1-RlDWy8O5JaJtK5zsws3yJvgW3kJWvdlDn2hy_YE",
+    image:
+      "https://media.licdn.com/dms/image/C4D0BAQFwq94aaHO6Mw/company-logo_200_200/0/1657880937495?e=1695254400&v=beta&t=uc1-RlDWy8O5JaJtK5zsws3yJvgW3kJWvdlDn2hy_YE",
     website: "https://skinzy.in/",
     post: "Mobile Developer",
     type: "Internship",
@@ -228,7 +229,8 @@ export const pos = [
     title: "GDSC Co Lead",
     organization: "Google Developer Students Club CRCE",
     organizationUrl: "https://crce-gdsc.github.io/",
-    certificateUrl: "https://drive.google.com/file/d/1p5Rzu9vDGMBmKNdpFuBg5QYrnFtwY236/view?usp=drive_link",
+    certificateUrl:
+      "https://drive.google.com/file/d/1p5Rzu9vDGMBmKNdpFuBg5QYrnFtwY236/view?usp=drive_link",
     start: "July 2022",
     end: "July 2023",
   },
@@ -317,7 +319,7 @@ interface ProjectType {
 export const projects: ProjectType = {
   "agriculture-iot": {
     title: "Agriculture IoT",
-    description: <>Web, Mobile & Machine Learning</>,
+    description: <>Smart Farming for Increased Efficiency and Profitability.</>,
     technologies: [
       "nextjs",
       "flutter",
@@ -343,14 +345,35 @@ export const projects: ProjectType = {
   },
   "tree-transparency": {
     title: "Tree Transparency",
-    description: <>Web & Blockchain</>,
-    technologies: ["nextjs", "firebase", "solidity", "ethersjs", "ipfs", "opencv"],
+    description: <>Empowering Environmental Conservation through Blockchain and Citizen Engagement</>,
+    technologies: [
+      "nextjs",
+      "firebase",
+      "solidity",
+      "ethersjs",
+      "ipfs",
+      "opencv",
+    ],
     links: [],
   },
   // edutube: {},
+  "infra-lab-crce": {
+    title: "Infra Lab CRCE",
+    description: (
+      <>Exploring Infrastructure in Fr. Conceicao Rodrigues College of Engineering.</>
+    ),
+    technologies: ["nextjs", "pocketbase"],
+    links: [
+      {
+        name: "Deployed Website",
+        href: "http://infra.fragnel.edu.in:3000/",
+        icon: <IconBrandGithub />,
+      },
+    ],
+  },
   "hotel-bookings-analysis": {
     title: "Hotel Bookings Analysis",
-    description: <>Data Analysis & Visualization</>,
+    description: <>Data-driven Growth, Trends, and Optimization with SQL and Power BI.</>,
     technologies: ["powerbi", "sqlserver"],
     links: [
       {

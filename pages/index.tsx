@@ -391,11 +391,11 @@ function Certifications() {
             <a
               target="blank"
               href={certification.credentialUrl}
-              className="duration-200 flex items-center bg-base-100 h-full w-full justify-between p-4 hover:bg-primary hover:text-primary-content hover:shadow-2xl hover:scale-105"
+              className="duration-200 group flex items-center bg-base-100 h-full w-full justify-between p-4 hover:bg-primary hover:text-primary-content hover:shadow-2xl hover:scale-105"
             >
               <div className="flex items-center gap-3">
                 <div className="avatar">
-                  <div className="bg-base-100 w-12 rounded-full outline outline-1 outline-offset-4 outline-base-content/40">
+                  <div className="bg-base-100 w-12 rounded-full outline outline-1 outline-offset-2 outline-base-content/40 group-hover:outline-primary-content">
                     <img
                       loading="eager"
                       src={certification.image}
