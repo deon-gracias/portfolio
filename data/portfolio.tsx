@@ -310,6 +310,7 @@ export const certifications = [
 interface ProjectType {
   [key: string]: {
     title: string;
+    tags?: string[];
     description: JSX.Element;
     technologies: string[];
     links: { name: string; href: string; icon: TablerIconsProps }[];
@@ -319,10 +320,10 @@ interface ProjectType {
 export const projects: ProjectType = {
   "agriculture-iot": {
     title: "Agriculture IoT",
+    tags: ["web-dev", "ml", "iot", "data-analysis"],
     description: <>Smart Farming for Increased Efficiency and Profitability.</>,
     technologies: [
       "nextjs",
-      "flutter",
       "nodejs",
       "firebase",
       "flask",
@@ -345,7 +346,13 @@ export const projects: ProjectType = {
   },
   "tree-transparency": {
     title: "Tree Transparency",
-    description: <>Empowering Environmental Conservation through Blockchain and Citizen Engagement</>,
+    tags: ["web-dev", "ml", "iot", "data-analysis"],
+    description: (
+      <>
+        Empowering Environmental Conservation through Blockchain and Citizen
+        Engagement
+      </>
+    ),
     technologies: [
       "nextjs",
       "firebase",
@@ -356,11 +363,14 @@ export const projects: ProjectType = {
     ],
     links: [],
   },
-  // edutube: {},
   "infra-lab-crce": {
     title: "Infra Lab CRCE",
+    tags: ["web-dev", "freelancing"],
     description: (
-      <>Exploring Infrastructure in Fr. Conceicao Rodrigues College of Engineering.</>
+      <>
+        Exploring Infrastructure in Fr. Conceicao Rodrigues College of
+        Engineering.
+      </>
     ),
     technologies: ["nextjs", "pocketbase"],
     links: [
@@ -373,7 +383,10 @@ export const projects: ProjectType = {
   },
   "hotel-bookings-analysis": {
     title: "Hotel Bookings Analysis",
-    description: <>Data-driven Growth, Trends, and Optimization with SQL and Power BI.</>,
+    tags: ["data-analysis"],
+    description: (
+      <>Data-driven Growth, Trends, and Optimization with SQL and Power BI.</>
+    ),
     technologies: ["powerbi", "sqlserver"],
     links: [
       {
@@ -383,20 +396,29 @@ export const projects: ProjectType = {
       },
     ],
   },
-  // "inventory-management": {
-  //   title: "College Inventory Management",
-  //   description: <></>,
-  //   technologies: ["nextjs", "pocketbase"],
-  //   links: [],
-  // },
-  // "ieee-conference": {
-  //   title: "CRCE IEEE Conference 2024",
-  //   description: <></>,
-  //   technologies: ["nextjs", "reactjs", "pocketbase"],
-  //   links: [],
-  // },
-  // "minmax-tic-tac-toe": {
+  "ieee-conference": {
+    title: "IEEE Conference CRCE 2024",
+    description: <>Website for IEEE Conference organized in CRCE</>,
+    tags: ["web-dev", "freelance"],
+    technologies: ["nextjs", "pocketbase"],
+    links: [],
+  },
+  "minmax-tic-tac-toe": {
+    title: "Alpha Beta Pruning Minmax Tic Tac Toe",
+    tags: ["web-dev"],
+    description: <></>,
+    technologies: ["nextjs", "reactjs"],
+    links: [
+      {
+        name: "Github",
+        href: "",
+        icon: <IconBrandGithub />,
+      },
+    ],
+  },
+  // "sb-financial": {
   //   title: "Alpha Beta Pruning Minmax Tic Tac Toe",
+  //   tags: ["web-dev", "freelance"],
   //   description: <></>,
   //   technologies: ["nextjs", "reactjs"],
   //   links: [
@@ -406,6 +428,12 @@ export const projects: ProjectType = {
   //       icon: <IconBrandGithub />,
   //     },
   //   ],
+  // },
+  // "inventory-management": {
+  //   title: "College Inventory Management",
+  //   description: <></>,
+  //   technologies: ["nextjs", "pocketbase"],
+  //   links: [],
   // },
   // "course-scheduling-electron": {
   //   title: "Course Scheduling System",

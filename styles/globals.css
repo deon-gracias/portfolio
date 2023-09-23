@@ -11,13 +11,12 @@
 }
 
 .splide__arrow {
-  @apply rounded-full p-3 w-fit h-fit bg-base-100 hover:bg-primary duration-200 hover:text-primary-content;
+  @apply rounded-full p-3 w-fit h-fit bg-base-100 opacity-90 backdrop-blur-3xl hover:bg-primary duration-200 hover:text-primary-content hover:opacity-100 border border-primary;
 }
 
 .splide__arrow svg {
   @apply fill-base-content;
 }
-
 
 .splide__arrow:hover svg {
   @apply fill-primary-content;

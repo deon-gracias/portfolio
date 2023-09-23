@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import {
   IconCertificate,
   IconChevronDown,
+  IconChevronRight,
   IconExternalLink,
   IconFileCv,
   IconWorldShare,
@@ -154,8 +155,10 @@ function Socials() {
 
 function Skills() {
   return (
-    <section id="skills" className="w-full pt-24 pb-16 mx-auto max-w-7xl">
-      <SectionHeading className="ml-4 flex justify-center" title="Skills" />
+    <section id="skills" className="w-full pt-24 pb-16 mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
+        <SectionHeading className="ml-4 flex justify-center" title="Skills" />
+      </div>
 
       <Splide
         options={{
@@ -172,39 +175,53 @@ function Skills() {
           },
         }}
         extensions={{ AutoScroll }}
+        hasTrack={false}
       >
-        {skills.map((skill, index) => (
-          <SplideSlide className="h-[350px] w-80" key={skill.title}>
-            <Card
-              variant="border"
-              className="w-full h-full flex-grow-0 flex-shrink-0"
-            >
-              {skill.icon}
-              <h2 className="card-title">{skill.title}</h2>
-              <div className="mt-5 card-actions">
-                {skill.items.map((item) => (
-                  <div
-                    className="overflow-hidden duration-200 border rounded-full hover:border-primary"
-                    key={item.image}
-                  >
-                    <img
-                      className="w-full h-full"
-                      src={item.image}
-                      alt={item.name}
-                    />
-                  </div>
-                ))}
-              </div>
-            </Card>
-          </SplideSlide>
-        ))}
+        <SplideTrack>
+          {skills.map((skill, index) => (
+            <SplideSlide className="h-[350px] w-80" key={skill.title}>
+              <Card
+                variant="border"
+                className="w-full h-full flex-grow-0 flex-shrink-0"
+              >
+                {skill.icon}
+                <h2 className="card-title">{skill.title}</h2>
+                <div className="mt-5 card-actions">
+                  {skill.items.map((item) => (
+                    <div
+                      className="overflow-hidden duration-200 border rounded-full hover:border-primary"
+                      key={item.image}
+                    >
+                      <img
+                        className="w-full h-full"
+                        src={item.image}
+                        alt={item.name}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </SplideSlide>
+          ))}
+        </SplideTrack>
+        <div className="splide__arrows">
+          <CursorObserver state={"action"}>
+            <button className="splide__arrow splide__arrow--prev">
+              <IconChevronRight />
+            </button>
+          </CursorObserver>
+          <CursorObserver state={"action"}>
+            <button className="splide__arrow splide__arrow--next">
+              <IconChevronRight />
+            </button>
+          </CursorObserver>
+        </div>
       </Splide>
     </section>
   );
 }
 
 function Projects() {
-  const controls = useAnimation();
 
   return (
     <section
@@ -213,7 +230,7 @@ function Projects() {
     >
       <SectionHeading className="flex justify-center" title="Projects" />
 
-      <div className="grid grid-cols-1 gap-4 md:grid-rows-2 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 auto-rows-fr">
         {Object.entries(projects)
           .slice(0, 4)
           .map(([id, project]) => (
@@ -254,11 +271,11 @@ function Projects() {
           ))}
       </div>
 
-      {/* <CursorObserver state={"action"}>
+      <CursorObserver state={"action"}>
         <Link href="/projects">
           <button className="btn btn-primary mt-4 w-full">View More</button>
         </Link>
-      </CursorObserver> */}
+      </CursorObserver>
     </section>
   );
 }

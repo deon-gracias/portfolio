@@ -46,33 +46,35 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <AnimatePresence initial={false}>
+    <>
       <Head>
         <title>Deon Gracias - Portfolio</title>
       </Head>
-      <motion.div
-        key="cursor"
-        className={twMerge(
-          "cursor bg-primary",
-          !cursor ? "" : "bg-accent text-accent-content"
-        )}
-        style={{
-          translateX: cursorXSpring,
-          translateY: cursorYSpring,
-        }}
-        initial={{
-          width: 30,
-          height: 30,
-        }}
-        animate={
-          cursor ? (cursor !== "action" ? { scale: 2 } : { scale: 0.5 }) : {}
-        }
-      >
-        {cursor === "download" && <IconDownload size={15} />}
-        {cursor === "link" && <IconExternalLink size={15} />}
-      </motion.div>
+      <AnimatePresence initial={false}>
+        <motion.div
+          key="cursor"
+          className={twMerge(
+            "cursor bg-primary",
+            !cursor ? "" : "bg-accent text-accent-content"
+          )}
+          style={{
+            translateX: cursorXSpring,
+            translateY: cursorYSpring,
+          }}
+          initial={{
+            width: 30,
+            height: 30,
+          }}
+          animate={
+            cursor ? (cursor !== "action" ? { scale: 2 } : { scale: 0.5 }) : {}
+          }
+        >
+          {cursor === "download" && <IconDownload size={15} />}
+          {cursor === "link" && <IconExternalLink size={15} />}
+        </motion.div>
+      </AnimatePresence>
       <Component {...pageProps} />
-    </AnimatePresence>
+    </>
   );
 }
 
