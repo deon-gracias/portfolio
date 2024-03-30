@@ -21,6 +21,7 @@ import rehypeSanitize from "rehype-sanitize";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import remarkToc from "remark-toc";
+import Head from "next/head";
 
 const projectDataDir = "data/projects";
 
@@ -30,6 +31,10 @@ export default function Project({
   const router = useRouter();
   return (
     <DrawerLayout>
+      <Head>
+        <title>{project.metadata.title} | Deon Gracias</title>
+      </Head>
+
       <button
         onClick={() => router.back()}
         className="mx-4 btn w-fit gap-2 fixed bottom-3 right-3"

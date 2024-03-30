@@ -7,13 +7,14 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function Projects() {
   const router = useRouter();
 
   const initialTags = [
     { id: "web-dev", name: "Web Development", selected: false },
-    { id: "mobile-dev", name: "Mobile Development", selected: false },
+    // { id: "mobile-dev", name: "Mobile Development", selected: false },
     { id: "ml", name: "Machine Learning", selected: false },
     { id: "iot", name: "Internet of Things", selected: false },
     { id: "freelancing", name: "Freelancing", selected: false },
@@ -35,6 +36,10 @@ export default function Projects() {
       id="projects"
       className="w-full px-4 pt-24 pb-16 mx-auto max-w-7xl scroll-p-32"
     >
+      <Head>
+        <title>Projects | Deon Gracias</title>
+      </Head>
+
       <h1 className="mb-10 text-5xl font-bold">Projects</h1>
 
       <div className="flex gap-2 mb-4 flex-wrap" ref={tagsParent}>

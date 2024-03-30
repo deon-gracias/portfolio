@@ -318,6 +318,27 @@ interface ProjectType {
 }
 
 export const projects: ProjectType = {
+  "tree-transparency": {
+    title: "Tree Transparency",
+    tags: ["web-dev", "ml", "iot", "data-analysis"],
+    description: (
+      <>
+        Empowering Environmental Conservation through Blockchain and Citizen
+        Engagement
+      </>
+    ),
+    technologies: [
+      "nextjs",
+      "firebase",
+      "solidity",
+      "ethersjs",
+      "ipfs",
+      "flask",
+      "arduino",
+      "opencv",
+    ],
+    links: [],
+  },
   "agriculture-iot": {
     title: "Agriculture IoT",
     tags: ["web-dev", "ml", "iot", "data-analysis"],
@@ -343,25 +364,6 @@ export const projects: ProjectType = {
         icon: <IconBrandGithub />,
       },
     ],
-  },
-  "tree-transparency": {
-    title: "Tree Transparency",
-    tags: ["web-dev", "ml", "iot", "data-analysis"],
-    description: (
-      <>
-        Empowering Environmental Conservation through Blockchain and Citizen
-        Engagement
-      </>
-    ),
-    technologies: [
-      "nextjs",
-      "firebase",
-      "solidity",
-      "ethersjs",
-      "ipfs",
-      "opencv",
-    ],
-    links: [],
   },
   "infra-lab-crce": {
     title: "Infra Lab CRCE",
@@ -396,18 +398,11 @@ export const projects: ProjectType = {
       },
     ],
   },
-  "ieee-conference": {
-    title: "IEEE Conference CRCE 2024",
-    description: <>Website for IEEE Conference organized in CRCE</>,
-    tags: ["web-dev", "freelance"],
-    technologies: ["nextjs", "pocketbase"],
-    links: [],
-  },
-  "minmax-tic-tac-toe": {
-    title: "Alpha Beta Pruning Minmax Tic Tac Toe",
+  "tic-tac-toe": {
+    title: "Tic Tac Toe",
     tags: ["web-dev"],
-    description: <></>,
-    technologies: ["nextjs", "reactjs"],
+    description: <>Minmax with Alpha Beta Pruning algorithm</>,
+    technologies: ["reactjs"],
     links: [
       {
         name: "Github",
@@ -416,6 +411,20 @@ export const projects: ProjectType = {
       },
     ],
   },
+  "static-int-educare-website": {
+    title: "Static Int Educare Website",
+    tags: ["web-dev", "internship", "html", "css", "php"],
+    description: <>Fixing the skill gap</>,
+    technologies: ["html", "css", "php"],
+    links: [],
+  },
+  // "ieee-conference": {
+  //   title: "IEEE Conference CRCE 2024",
+  //   tags: ["web-dev", "freelance"],
+  //   description: <>Website for IEEE Conference organized in CRCE</>,
+  //   technologies: ["nextjs", "pocketbase"],
+  //   links: [],
+  // },
   // "sb-financial": {
   //   title: "Alpha Beta Pruning Minmax Tic Tac Toe",
   //   tags: ["web-dev", "freelance"],

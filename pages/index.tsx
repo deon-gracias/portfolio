@@ -222,7 +222,6 @@ function Skills() {
 }
 
 function Projects() {
-
   return (
     <section
       id="projects"
@@ -257,11 +256,11 @@ function Projects() {
 
                   <div className="card-actions justify-end">
                     <CursorObserver state={"link"}>
-                      <Link href={`/projects/${id}`}>
-                        <button className="btn btn-primary gap-2">
+                      <Link passHref href={`/projects/${id}`}>
+                        <a target="blank" className="btn btn-primary gap-2">
                           <IconExternalLink />
                           View
-                        </button>
+                        </a>
                       </Link>
                     </CursorObserver>
                   </div>

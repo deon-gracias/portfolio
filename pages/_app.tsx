@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Deon Gracias - Portfolio</title>
+        <title>Portfolio | Deon Gracias</title>
       </Head>
       <AnimatePresence initial={false}>
         <motion.div

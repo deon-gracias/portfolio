@@ -14,11 +14,18 @@ tags:
 
 ## Table of Contents
 
+# Project Overview
+
+- Developed a web3 application on blockchain to promote transparent fund transfers and tree planting initiatives by NGOs and government bodies.
+- Implemented features for tracking tree status, rewarding citizen volunteers, facilitating tree buying/selling, and crowdfunding for tree maintenance.
+- Technologies used: Next.js, React.js, Firebase, Computer Vision (OpenCV), Blockchain (Ethereum, Solidity), IPFS.
+
 # Summary
 
-- Developed a web 3 app on blockchain for transparent fund transfers and tree planting by NGOs and government bodies
-- Implemented tracking and reward system for citizen volunteers, buying/selling of trees, and crowdfunding for tree maintenance
-- Used Next.js, OpenCV, Ethers.js, Hardhat, IPFS, and Firebase
+- Addressed challenges in tree plantation efforts by enhancing transparency in fund transfers and enabling volunteers to monitor tree status.
+- Leveraged blockchain technology to ensure transparent and accountable fund transfers, reducing the risk of misuse.
+- Incorporated a rewards system to incentivize citizen participation in tree monitoring and nurturing activities.
+- Real-time data collection facilitated analysis of factors affecting tree growth and improved survival rates.
 
 # Links
 
@@ -27,23 +34,25 @@ tags:
 
 # Abstract
 
-- We propose a web app deployed on a blockchain platform to address challenges related to tree plantation. The app aims to improve transparency in fund transfers and enable volunteers to track the status of planted trees.
-
-- Using blockchain technology, the app ensures transparent and accountable fund transfers, minimizing the risk of misuse. Volunteers can use the app to regularly update tree growth and health, facilitating timely interventions to prevent drying and death. Real-time data collection helps analyze factors for successful tree growth and enhances survival rates.
-
-- To encourage citizen participation, the app incorporates a rewards system, motivating volunteers to actively monitor and nurture trees.
-
-- In summary, the proposed web app on a blockchain platform improves transparency in fund transfers and enables volunteers to track tree status. Incentivizing citizen involvement enhances tree survival and fosters responsibility towards environmental conservation.
+- Proposed a web application deployed on a blockchain platform to enhance transparency and efficiency in tree plantation initiatives.
+- Utilized blockchain technology to ensure transparent fund transfers and enable real-time tracking of tree status by volunteers.
+- Implemented features such as rewards for citizen volunteers and payment gateways for organizations to support tree plantation efforts.
+- Aimed to foster citizen engagement and responsibility towards environmental conservation through incentivized participation.
 
 # Methodology
 
-- Design a user-friendly landing page with an authentication system for the app.
-- Implement a feature that allows authenticated users to update the status of trees they are monitoring.
-- Ensure the accuracy and reliability of tree status updates by leveraging a network of miners for verification.
-- Utilize a smart contract to automate and facilitate the timely distribution of rewards to users.
-- Incorporate a payment gateway within the web app, enabling organizations to make payments to NGOs and government bodies.
-- Streamline financial transactions and promote transparency by integrating the payment gateway functionality.
-- Enhance user experience by providing a secure login system and intuitive interface for updating tree statuses.
-- Foster trust and accountability by implementing a robust verification process involving a network of miners.
-- Optimize efficiency by automating reward distribution through the use of smart contracts.
-- Simplify financial transactions and promote transparency by offering a payment gateway for seamless payments to beneficiary entities.
+- Design a user-friendly landing page with authentication for the web application.
+- Implement features for authenticated users to update tree statuses they are monitoring.
+- Ensure accuracy and reliability of tree status updates through verification by a network of miners.
+- Utilize smart contracts to automate reward distribution to users.
+- Integrate a payment gateway for seamless transactions between organizations and beneficiary entities.
+- Streamline financial transactions and promote transparency through the payment gateway.
+- Enhance user experience with secure login systems and intuitive interfaces.
+- Foster trust and accountability through robust verification processes.
+- Optimize efficiency by automating reward distribution via smart contracts.
+- Simplify financial transactions and promote transparency with the payment gateway.
+
+# Conclusion
+
+- The Tree Transparency project represents a significant step towards improving transparency and accountability in tree plantation initiatives.
+- By leveraging blockchain technology and incentivizing citizen participation, the project aims to enhance tree survival rates and promote environmental conservation.
