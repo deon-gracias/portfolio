@@ -7,6 +7,8 @@ import {
   IconChevronRight,
   IconExternalLink,
   IconFileCv,
+  IconFileDescription,
+  IconReport,
   IconWorldShare,
 } from "@tabler/icons-react";
 import { motion, useAnimation } from "framer-motion";
@@ -24,6 +26,7 @@ import {
   experiences,
   pos,
   projects,
+  publications,
   resume,
   skills,
   socials,
@@ -39,6 +42,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Experience />
+      <Publications />
       <PositionOfResponsibility />
       <Certifications />
       <Education />
@@ -275,6 +279,46 @@ function Projects() {
           <button className="btn btn-primary mt-4 w-full">View More</button>
         </Link>
       </CursorObserver>
+    </section>
+  );
+}
+
+function Publications() {
+  return (
+    <section id="experience" className="w-full px-4 py-16 mx-auto max-w-7xl">
+      <SectionHeading className="flex justify-center" title="publications" />
+
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {Object.entries(publications).map(([key, publication]) => (
+          <div
+            className="duration-200 card-compact shadow-md card hover:shadow-xl"
+            key={`${key}`}
+          >
+            <div className="card-body">
+              {/* <img
+                className="rounded-full w-20 h-20 mb-2"
+                src={experience.image}
+                alt={experience.company}
+              /> */}
+              <h2 className="card-title">{publication.title}</h2>
+              {/* <h4 className="text-sm italic">{publication.citation}</h4> */}
+              <p className="text-sm">{publication.citation}</p>
+              <div className="justify-end card-actions">
+                <CursorObserver state={"link"}>
+                  <a target="blank" href={publication.link.href}>
+                    <button className="btn btn-circle btn-primary">
+                      <IconFileDescription />
+                    </button>
+                  </a>
+                </CursorObserver>
+                {/* {experience.ongoing && (
+                  <span className="badge badge-primary">Ongoing</span>
+                )} */}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

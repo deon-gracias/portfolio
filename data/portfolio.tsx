@@ -5,6 +5,7 @@ import {
   IconDeviceMobile,
   IconMail,
   IconPackages,
+  IconReport,
   IconRobot,
   IconServer,
   IconSourceCode,
@@ -456,4 +457,48 @@ export const projects: ProjectType = {
   //     },
   //   ],
   // },
+};
+
+interface PublicationType {
+  [key: string]: {
+    title: string;
+    citation: JSX.Element;
+    link: { href: string; icon: TablerIconsProps };
+  };
+}
+
+export const publications: PublicationType = {
+  "tree-transparency": {
+    title:
+      "A Comprehensive System for Sustainable Tree Plantation and Growth Monitoring using Blockchain, AI, and IoT",
+    citation: (
+      <>
+        Monali Shetty, Deon Gracias, Ryan Valiaparambil, Hisbaan Sayed, Vijay
+        Prajapati, Mahek Intwala, Prachi Patil, “A Comprehensive System for
+        Sustainable Tree Plantation and Growth Monitoring using Blockchain, AI,
+        and IoT”, Int J Intell Syst Appl Eng, vol. 12, no. 21s, pp. 955–961,
+        Mar. 2024.
+      </>
+    ),
+    link: {
+      href: "https://ijisae.org/index.php/IJISAE/article/view/5494",
+      icon: <IconReport />,
+    },
+  },
+  edutube: {
+    title: "Edutube: Enhancing Credibility & User Experience Online",
+    citation: (
+      <>
+        R. Bothra, D. Gracias, V. Prajapati, and S. N. Deshmukh, “EduTube :
+        Enhancing Credibility and user experience in Online learning,”
+        International Journal for Multidisciplinary Research, vol. 5, no. 5,
+        Oct. 2023, doi: 10.36948/ijfmr.2023.v05i05.7145.
+      </>
+    ),
+    link: {
+      href: "https://ijisae.org/index.php/IJISAE/article/view/5494",
+      icon: <IconReport />,
+    },
+  },
+  // underwater-communication: {}
 };
