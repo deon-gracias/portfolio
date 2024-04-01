@@ -13,6 +13,7 @@ import {
   TablerIconsProps,
 } from "@tabler/icons-react";
 import { skill_badges_mono } from "../data/skill-badges";
+import Link from "next/link";
 
 export const resume =
   "https://docs.google.com/document/d/184re9dYZInpsnHHPa46KyRY59j6CfteJaUY3oU1bomQ/export?format=pdf";
@@ -462,6 +463,7 @@ export const projects: ProjectType = {
 interface PublicationType {
   [key: string]: {
     title: string;
+    paper: JSX.Element;
     citation: JSX.Element;
     link: { href: string; icon: TablerIconsProps };
   };
@@ -471,6 +473,11 @@ export const publications: PublicationType = {
   "tree-transparency": {
     title:
       "A Comprehensive System for Sustainable Tree Plantation and Growth Monitoring using Blockchain, AI, and IoT",
+    paper: (
+      <Link href="https://ijisae.org/index.php/IJISAE">
+        IJISAE (Q3 Scopus Indexed)
+      </Link>
+    ),
     citation: (
       <>
         Monali Shetty, Deon Gracias, Ryan Valiaparambil, Hisbaan Sayed, Vijay
@@ -487,6 +494,7 @@ export const publications: PublicationType = {
   },
   edutube: {
     title: "Edutube: Enhancing Credibility & User Experience Online",
+    paper: <Link href="https://www.ijfmr.com/">IJFMR</Link>,
     citation: (
       <>
         R. Bothra, D. Gracias, V. Prajapati, and S. N. Deshmukh, “EduTube :
@@ -500,5 +508,20 @@ export const publications: PublicationType = {
       icon: <IconReport />,
     },
   },
-  // underwater-communication: {}
+  "underwater-communication": {
+    title: "Underwater Wireless Communication using Acoustic & Optical Waves",
+    paper: <Link href="https://www.ijircce.com/">IJIRCCE</Link>,
+    citation: (
+      <>
+        V. More, D. Gracias, N. Arya, H. Wakode, A. Singh, and C. Chavan,
+        "Underwater Wireless Communication using Acoustic & Optical waves," Int.
+        J. Innov. Res. Comput. Commun. Eng., pp. 6739, Jun. 2021. DOI:
+        10.15680/IJIRCCE.2021.0906119.
+      </>
+    ),
+    link: {
+      href: "http://ijircce.com/admin/main/storage/app/pdf/8a9tEgATQ9Pb7zJFPy7MXmavwNoVuVglniuDHrRJ.pdf",
+      icon: <IconReport />,
+    },
+  },
 };

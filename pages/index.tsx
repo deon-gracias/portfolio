@@ -301,7 +301,7 @@ function Publications() {
                 alt={experience.company}
               /> */}
               <h2 className="card-title">{publication.title}</h2>
-              {/* <h4 className="text-sm italic">{publication.citation}</h4> */}
+              <h4 className="text-sm italic">{publication.paper}</h4>
               <p className="text-sm">{publication.citation}</p>
               <div className="justify-end card-actions">
                 <CursorObserver state={"link"}>
