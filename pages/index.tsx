@@ -301,8 +301,8 @@ function Publications() {
                 alt={experience.company}
               /> */}
               <h2 className="card-title">{publication.title}</h2>
-              <h4 className="text-sm italic">{publication.paper}</h4>
-              <p className="text-sm">{publication.citation}</p>
+              <h4 className="text-sm italic">{publication.journal}</h4>
+              <p className="text-sm">{publication.paper}</p>
               <div className="justify-end card-actions">
                 <CursorObserver state={"link"}>
                   <a target="blank" href={publication.link.href}>

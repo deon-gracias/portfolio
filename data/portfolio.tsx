@@ -463,8 +463,8 @@ export const projects: ProjectType = {
 interface PublicationType {
   [key: string]: {
     title: string;
+    journal: JSX.Element;
     paper: JSX.Element;
-    citation: JSX.Element;
     link: { href: string; icon: TablerIconsProps };
   };
 }
@@ -473,12 +473,12 @@ export const publications: PublicationType = {
   "tree-transparency": {
     title:
       "A Comprehensive System for Sustainable Tree Plantation and Growth Monitoring using Blockchain, AI, and IoT",
-    paper: (
+    journal: (
       <Link href="https://ijisae.org/index.php/IJISAE">
         IJISAE (Q3 Scopus Indexed)
       </Link>
     ),
-    citation: (
+    paper: (
       <>
         Int. J. Intell. Syst. Appl. Eng., vol. 12, no. 21s, pp. 955–961, Mar.
         2024.
@@ -491,8 +491,8 @@ export const publications: PublicationType = {
   },
   edutube: {
     title: "Edutube: Enhancing Credibility & User Experience Online",
-    paper: <Link href="https://www.ijfmr.com/">IJFMR</Link>,
-    citation: (
+    journal: <Link href="https://www.ijfmr.com/">IJFMR</Link>,
+    paper: (
       <>
         Int. J. Multidiscip. Res., vol. 5, no. 5, Oct. 2023, doi:
         10.36948/ijfmr.2023.v05i05.7145.
@@ -505,8 +505,8 @@ export const publications: PublicationType = {
   },
   "underwater-communication": {
     title: "Underwater Wireless Communication using Acoustic & Optical Waves",
-    paper: <Link href="https://www.ijircce.com/">IJIRCCE</Link>,
-    citation: (
+    journal: <Link href="https://www.ijircce.com/">IJIRCCE</Link>,
+    paper: (
       <>
         Int. J. Innov. Res. Comput. Commun. Eng., pp. 6739, Jun. 2021. DOI:
         10.15680/IJIRCCE.2021.0906119.
