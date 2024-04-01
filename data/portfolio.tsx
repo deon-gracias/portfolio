@@ -480,11 +480,8 @@ export const publications: PublicationType = {
     ),
     citation: (
       <>
-        Monali Shetty, Deon Gracias, Ryan Valiaparambil, Hisbaan Sayed, Vijay
-        Prajapati, Mahek Intwala, Prachi Patil, “A Comprehensive System for
-        Sustainable Tree Plantation and Growth Monitoring using Blockchain, AI,
-        and IoT”, Int J Intell Syst Appl Eng, vol. 12, no. 21s, pp. 955–961,
-        Mar. 2024.
+        Int. J. Intell. Syst. Appl. Eng., vol. 12, no. 21s, pp. 955–961, Mar.
+        2024.
       </>
     ),
     link: {
@@ -497,14 +494,12 @@ export const publications: PublicationType = {
     paper: <Link href="https://www.ijfmr.com/">IJFMR</Link>,
     citation: (
       <>
-        R. Bothra, D. Gracias, V. Prajapati, and S. N. Deshmukh, “EduTube :
-        Enhancing Credibility and user experience in Online learning,”
-        International Journal for Multidisciplinary Research, vol. 5, no. 5,
-        Oct. 2023, doi: 10.36948/ijfmr.2023.v05i05.7145.
+        Int. J. Multidiscip. Res., vol. 5, no. 5, Oct. 2023, doi:
+        10.36948/ijfmr.2023.v05i05.7145.
       </>
     ),
     link: {
-      href: "https://ijisae.org/index.php/IJISAE/article/view/5494",
+      href: "https://www.ijfmr.com/papers/2023/5/7145.pdf",
       icon: <IconReport />,
     },
   },
@@ -513,9 +508,7 @@ export const publications: PublicationType = {
     paper: <Link href="https://www.ijircce.com/">IJIRCCE</Link>,
     citation: (
       <>
-        V. More, D. Gracias, N. Arya, H. Wakode, A. Singh, and C. Chavan,
-        "Underwater Wireless Communication using Acoustic & Optical waves," Int.
-        J. Innov. Res. Comput. Commun. Eng., pp. 6739, Jun. 2021. DOI:
+        Int. J. Innov. Res. Comput. Commun. Eng., pp. 6739, Jun. 2021. DOI:
         10.15680/IJIRCCE.2021.0906119.
       </>
     ),
