@@ -29,6 +29,7 @@ tags:
 
 # Links
 
+- [Research Paper](https://www.ijisae.org/index.php/IJISAE/article/view/5494)
 - [Demo Video](https://www.youtube.com/watch?v=UhRd8yo6NAk)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UhRd8yo6NAk?si=to06-hRck-96QQAu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
