@@ -71,7 +71,7 @@ function Hero() {
             Full-Stack Web and App Developer.
           </h2>
           <p className="pt-3 pb-6">
-            Strong engineering professional, pursuing Bachelor of Engineering
+            Strong engineering professional, completed Bachelor of Engineering
             focused in Computer Engineering from Fr. Conceicao Rodrigues College
             of Engineering.
           </p>

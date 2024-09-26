@@ -141,6 +141,21 @@ export const skills = [
 
 export const experiences = [
   {
+    company: "University of Mumbai",
+    website: "https://mu.ac.in/",
+    post: "Software Developer Intern",
+    type: "Internship",
+    start: "July 2023",
+    end: "January 2024",
+    // letter: "https://drive.google.com/file/d/10WHIq1OnUl244AFBnENK9wsl5oCDd9YL/view?usp=sharing",
+    skills: [
+      "Next.js",
+      "SQLite",
+      "Pocketbase",
+      "Recharts",
+    ],
+  },
+  {
     company: "Skinzy Software Solutions",
     image:
       "https://media.licdn.com/dms/image/C4D0BAQFwq94aaHO6Mw/company-logo_200_200/0/1657880937495?e=1695254400&v=beta&t=uc1-RlDWy8O5JaJtK5zsws3yJvgW3kJWvdlDn2hy_YE",
