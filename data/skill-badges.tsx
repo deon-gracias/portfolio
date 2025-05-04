@@ -32,10 +32,14 @@ export const skill_badges: SkillBadgeType = {
     "https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase",
   mongodb:
     "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white",
+  fastapi:
+    "https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi",
   flask:
     "https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white",
   flutter:
     "https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white",
+  langchain:
+    "https://img.shields.io/badge/LangChain-ffffff?logo=langchain&logoColor=green",
   tensorflow:
     "https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white",
   scikit:
@@ -79,7 +83,7 @@ export const skill_badges: SkillBadgeType = {
   kaggle:
     "https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white",
   opencv:
-    "https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white"
+    "https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white",
 };
 
 export const skill_badges_mono: SkillBadgeType = {
@@ -112,10 +116,14 @@ export const skill_badges_mono: SkillBadgeType = {
     "https://img.shields.io/badge/firebase-fff?style=for-the-badge&logo=firebase&logoColor=black",
   mongodb:
     "https://img.shields.io/badge/MongoDB-fff?style=for-the-badge&logo=mongodb&logoColor=black",
+  fastapi:
+    "https://img.shields.io/badge/FastAPI-fff?style=for-the-badge&logo=fastapi&logoColor=black",
   flask:
     "https://img.shields.io/badge/Flask-fff?style=for-the-badge&logo=flask&logoColor=black",
   flutter:
     "https://img.shields.io/badge/Flutter-fff?style=for-the-badge&logo=flutter&logoColor=black",
+  langchain:
+    "https://img.shields.io/badge/LangChain-fff?style=for-the-badge&logo=langchain&logoColor=black",
   tensorflow:
     "https://img.shields.io/badge/TensorFlow-fff?style=for-the-badge&logo=tensorflow&logoColor=black",
   scikit:
@@ -159,5 +167,5 @@ export const skill_badges_mono: SkillBadgeType = {
   kaggle:
     "https://img.shields.io/badge/Kaggle-fff?style=for-the-badge&logo=kaggle&logoColor=black",
   opencv:
-    "https://img.shields.io/badge/opencv-fff?style=for-the-badge&logo=opencv&logoColor=black"
+    "https://img.shields.io/badge/opencv-fff?style=for-the-badge&logo=opencv&logoColor=black",
 };

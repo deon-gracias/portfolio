@@ -25,8 +25,8 @@ export const educations = [
     field: "Computer Engineering",
     start: "September 2021",
     end: "May 2024",
-    pursuing: true,
-    grade: "9.2 CGPA",
+    // pursuing: true,
+    grade: "9.1 CGPA",
   },
   {
     name: "Thakur Polytechnic",
@@ -72,9 +72,10 @@ export const skills = [
     ],
   },
   {
-    title: "Machine Learning & Data Science",
+    title: "AI, Machine Learning & Data Science",
     icon: <IconRobot size={40} />,
     items: [
+      { name: "Langchain", image: skill_badges_mono.langchain },
       { name: "Tensorflow", image: skill_badges_mono.tensorflow },
       { name: "Scikit", image: skill_badges_mono.scikit },
       { name: "Pandas", image: skill_badges_mono.pandas },
@@ -90,6 +91,7 @@ export const skills = [
       { name: "Next.js", image: skill_badges_mono.nextjs },
       { name: "React.js", image: skill_badges_mono.reactjs },
       { name: "Node.js", image: skill_badges_mono.nodejs },
+      { name: "Fast API", image: skill_badges_mono.fastapi },
       { name: "Flask", image: skill_badges_mono.flask },
       { name: "Django", image: skill_badges_mono.django },
       { name: "PHP", image: skill_badges_mono.php },
@@ -141,6 +143,24 @@ export const skills = [
 
 export const experiences = [
   {
+    company: "Aditya Birla Management Corporation",
+    website: "https://www.adityabirla.com/",
+    post: "Full Stack Web Developer",
+    type: "Full-Time",
+    start: "January 2025",
+    // letter: "https://drive.google.com/file/d/10WHIq1OnUl244AFBnENK9wsl5oCDd9YL/view?usp=sharing",
+    skills: [
+      "Python",
+      "FastAPI",
+      "Flask",
+      "Next.js",
+      "React.js",
+      "Langchain",
+      "Docker",
+      "Linux",
+    ],
+  },
+  {
     company: "University of Mumbai",
     website: "https://mu.ac.in/",
     post: "Software Developer Intern",
@@ -148,19 +168,14 @@ export const experiences = [
     start: "July 2023",
     end: "January 2024",
     // letter: "https://drive.google.com/file/d/10WHIq1OnUl244AFBnENK9wsl5oCDd9YL/view?usp=sharing",
-    skills: [
-      "Next.js",
-      "SQLite",
-      "Pocketbase",
-      "Recharts",
-    ],
+    skills: ["Next.js", "SQLite", "Pocketbase", "Recharts"],
   },
   {
     company: "Skinzy Software Solutions",
     image:
       "https://media.licdn.com/dms/image/C4D0BAQFwq94aaHO6Mw/company-logo_200_200/0/1657880937495?e=1695254400&v=beta&t=uc1-RlDWy8O5JaJtK5zsws3yJvgW3kJWvdlDn2hy_YE",
     website: "https://skinzy.in/",
-    post: "Mobile Developer",
+    post: "Mobile Developer Intern",
     type: "Internship",
     start: "December 2022",
     end: "March 2023",
@@ -200,7 +215,7 @@ export const experiences = [
   {
     company: "Static Int. Educare",
     website: "http://staticinteducare.in/upskilling.html",
-    post: "Web Developer",
+    post: "Web Developer Intern",
     type: "Internship",
     start: "August 2020",
     end: "July 2022",

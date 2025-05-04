@@ -119,10 +119,12 @@ function Card({ variant, className, children }: PropsWithChildren<CardType>) {
     <div
       className={twMerge(
         "p-1 bg-gradient-to-tr from-primary to-secondary card",
-        className
+        className,
       )}
     >
-      <div className="card-body bg-base-100 card">{children}</div>
+      <div className="card-body bg-base-100 card overflow-scroll">
+        {children}
+      </div>
     </div>
   ) : variant === "glow" ? (
     <div className={twMerge("relative", className)}>
@@ -523,7 +525,7 @@ function SectionHeading({
     <h1
       className={twMerge(
         "text-2xl mb-8 w-fit font-bold uppercase bg-gradient-to-r from-primary to-secondary bg-[length:100%_7px] bg-no-repeat bg-bottom",
-        className
+        className,
       )}
     >
       {title}
