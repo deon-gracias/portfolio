@@ -25,7 +25,7 @@ export const educations = [
     field: "Computer Engineering",
     start: "September 2021",
     end: "May 2024",
-    // pursuing: true,
+    pursuing: false,
     grade: "9.1 CGPA",
   },
   {
