@@ -360,13 +360,15 @@ function Experience() {
                 {experience.start} - {experience.end}
               </p>
               <div className="justify-end card-actions">
-                <CursorObserver state={"link"}>
-                  <a target="blank" href={experience.letter}>
-                    <button className="btn btn-circle btn-primary">
-                      <IconCertificate />
-                    </button>
-                  </a>
-                </CursorObserver>
+                {experience.letter &&
+                  <CursorObserver state={"link"}>
+                    <a target="blank" href={experience.letter}>
+                      <button className="btn btn-circle btn-primary">
+                        <IconCertificate />
+                      </button>
+                    </a>
+                  </CursorObserver>
+                  }
                 {/* {experience.ongoing && (
                   <span className="badge badge-primary">Ongoing</span>
                 )} */}
