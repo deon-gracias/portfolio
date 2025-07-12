@@ -148,6 +148,7 @@ export const experiences = [
     post: "Full Stack Web Developer",
     type: "Full-Time",
     start: "January 2025",
+    end: "Present",
     // letter: "https://drive.google.com/file/d/10WHIq1OnUl244AFBnENK9wsl5oCDd9YL/view?usp=sharing",
     skills: [
       "Python",
@@ -167,7 +168,7 @@ export const experiences = [
     type: "Internship",
     start: "July 2023",
     end: "January 2024",
-    // letter: "https://drive.google.com/file/d/10WHIq1OnUl244AFBnENK9wsl5oCDd9YL/view?usp=sharing",
+    letter: "https://drive.google.com/file/d/1707kOKDgg7-anMMdfSwSS1Svg9oUeHD7/view?usp=sharing",
     skills: ["Next.js", "SQLite", "Pocketbase", "Recharts"],
   },
   {
