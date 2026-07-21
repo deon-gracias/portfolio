@@ -199,7 +199,7 @@ export const experiences = [
       "https://skinzy.in/static/media/logo-transparent-background.8d754bd6e489edf2f14d.png",
     website: "http://staticinteducare.in/upskilling.html",
     post: "Mentor",
-    type: "Part Time",
+    type: "Full Time",
     start: "July 2022",
     end: "November 2022",
     letter:
@@ -216,8 +216,8 @@ export const experiences = [
   {
     company: "Static Int. Educare",
     website: "http://staticinteducare.in/upskilling.html",
-    post: "Web Developer Intern",
-    type: "Internship",
+    post: "Web Developer",
+    type: "Full Time",
     start: "August 2020",
     end: "July 2022",
     letter:
